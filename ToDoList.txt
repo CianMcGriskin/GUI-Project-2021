@@ -38,7 +38,7 @@ own customised CSS rules for this.
 • Demonstrate the use of events – both inline (HTML) and DOM level 2 event listeners.
 
 
-1.Basics
+1.Home Page
 a)The title "GMIT-games" is the title to the website so we will put that on top of the webpage.
 b)We will need to find a suitable font for all text that is'nt anything too fancy but makes the text look nicer.
 c)Under the title we will have a bar with the following sections:
@@ -47,5 +47,18 @@ c)Under the title we will have a bar with the following sections:
 	What's on sale 
 	Best sellers  (We will put random 5 games into the "What's on sale" and "Best sellers" section)
 	Shopping basket (basically the checkout)
-d)we will need to find random 10 games for each genre of games and also decide what the genres are going to be.
-e)
+d)We will need to find random 10 games for each genre of games and also decide what the genres are going to be.
+e)We will need to figure out a background image for the title. (we could just go into paint and slap a couple of images of controllers or gaming stuff and we should be good)
+f)For the home page we will put in all the games in a 5x10 grid (5 columns, 10 rows) and make sure they're random.
+g)The basic homepage is done and we will be able to make changes once seeing the result.
+MAKE SURE TO SAVE THIS AS "home.html"
+
+2.log-in page
+a)We will have 3 simple login usernames and passwords, lets use an array to store these.
+	Accounts:
+	user: gamer312 pass: easygames
+	user: weirdturtle pass: thebigbox
+	user: username pass: password (for easy access when testing, dont ask about the rest i dont have any ideas xD)
+b)The title will still be there but the rest is gone.
+c)We will need to put in 2 input fiels for the username and password. We will have the login button and also a "forgot my password" button which takes the username you input and gives u the password for it. (yes a very hacker-proof website i know)
+d)
