@@ -1,0 +1,51 @@
+NOTE: We have to meet specific requirements for this project so make sure you meet them 
+and also dont forget to COMMENT OUT CODE.
+
+THE REQUIREMENTS:
+Using HTML, CSS and JavaScript - Your website should at least:
+• Include a page for capturing customer details for an order which can be validated – e.g. Name fields not left
+blank, email address includes ‘@’ and a ‘.’.
+
+• Allow the customer to enter their login details and have login details validated.
+This could be the first page of your website. Using pre coded usernames and
+passwords within JavaScript is fine for this.
+
+• Include an interface for displaying products or services to purchase.
+
+• Allow the user to “purchase” items from the site – e.g. a basket with a summary of their order, and a total price
+
+• Allow the user to enter a coupon code and get a discount if the coupon code is valid.
+For example, the coupon may be only valid before a particular date.
+
+• Include a slideshow which displays a different image each time the page is loaded
+
+
+Your site should also meet the following implementation specifications:
+• Use at least 3 arrays – These arrays can be used for anything you like. For example, you could use an array for
+storing the image names which could be referenced by the slideshow. Another array could be used for storing
+product details.
+
+• Use session storage for web storage in the browser – this would be useful for a basket to store products
+selected by the customer to purchase and also to display a summary page with the order details.
+
+• Be responsive to changes in browser window size. You can use bootstrap, some other framework or use your
+own customised CSS rules for this.
+
+• Access and change HTML elements on the web page through the DOM
+
+• Access and change styling through the DOM
+
+• Demonstrate the use of events – both inline (HTML) and DOM level 2 event listeners.
+
+
+1.Basics
+a)The title "GMIT-games" is the title to the website so we will put that on top of the webpage.
+b)We will need to find a suitable font for all text that is'nt anything too fancy but makes the text look nicer.
+c)Under the title we will have a bar with the following sections:
+	Home
+	Browse (This will be a dropdown text where u will be able to pick from 5 different genres)
+	What's on sale 
+	Best sellers  (We will put random 5 games into the "What's on sale" and "Best sellers" section)
+	Shopping basket (basically the checkout)
+d)we will need to find random 10 games for each genre of games and also decide what the genres are going to be.
+e)
