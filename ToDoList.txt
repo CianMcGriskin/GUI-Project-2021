@@ -63,5 +63,20 @@ b)The title will still be there but the rest is gone.
 c)We will need to put in 2 input fields for the username and password. We will have the login button and also a "forgot my password" button which takes the username you input and gives u the password for it. (yes a very hacker-proof website i know)
 d)Make sure that when you input the username wrong it says "incorrect username" and the same for the password, if both are entered wrong then output "Wrong username and password". (lets make the pop-up red and not an alert box just some text on screen)
 
-3.
+3.Genre pages
+a)This will be a copy of the home page but the header will be "Browsing (genre)" and then a display of a 1x5 grid (1 row, 5 columns) with games.
+b)LIST OF GENRES AND GAMES:
+	Action:
+	
+	Adventure:
+	
+	MMO:
+	
+	Racing:
+	
+	Strategy:
+	
+4.What's on sale
+a)
+	
 
