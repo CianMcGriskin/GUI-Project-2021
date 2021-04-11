@@ -1,6 +1,6 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 17%);
+  grid-template-columns: repeat(5, 20%);
   grid-column-gap: 5px;
   padding: 25px 20px 25px 20px;
 }
@@ -8,6 +8,10 @@
 .column
 {
 	text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	max-width: 300px;
+	margin: auto;
+	font-family: arial;
 }
 
 .image
@@ -21,15 +25,25 @@
 	backface-visibility: hidden;
 }
 
-.button {
-  background-color: #4CAF50;
+
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.column button {
   border: none;
+  outline: 0;
+  padding: 12px;
   color: white;
-  padding: 20px;
+  background-color: #000;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.column button:hover {
+  opacity: 0.7;
 }
