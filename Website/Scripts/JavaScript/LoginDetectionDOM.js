@@ -35,9 +35,9 @@
 			welcomeMessage.innerHTML = '<b>Welcome back, </b>' + localStorageUsername + "<b>!</b>";
 			
 			//changes login page to an information center for your profile (A.H-L)
-			if(document.getElementById('loginPage') != null)
-			{
-			let tempCoveredPassword = "";
+			if(document.getElementById('loginPage') != null) //errors occur on websites other than User panel when this is not there
+			
+			let tempCoveredPassword = ""; 
 			for(var i = 1; i <= localStoragePassword.length;i++)
 			{
 				tempCoveredPassword += "*"
