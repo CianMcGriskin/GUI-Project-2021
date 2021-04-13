@@ -71,7 +71,7 @@
 	</div>
 </div>
 <!-- End of Header Menu -->
-		
+	<div id="loginPage">
 		<br>
 		<br>
 		<br>
@@ -94,7 +94,7 @@
 			&emsp;&emsp;<button style="height:70px; width=40px;" onclick="forgotPassword()">&emsp;Forgot my Password&emsp;</button>
 		</h2>
 
-
+	</div>
 	</body>
 	<script type="text/javascript" src="Scripts/JavaScript/LoginDetectionDOM.js"></script>
 	<script>
@@ -149,9 +149,11 @@
 			
 			//setting username to a localStorage when successfully logged in (C.McGr)
 			var sessionUsername = document.getElementById('usernameInput').value;
+			var sessionPassword = document.getElementById('passwordInput').value;
 			if(correctLogin == 1)
 			{
 				localStorage.setItem('Username', sessionUsername);
+				localStorage.setItem('Password', sessionPassword);
 			}
 		}
 		var isUsernameCorrect = 0; //VAR TO SEE IF THE USERNAME ENTERED IS IN THE ARRAY (A.H-L)
