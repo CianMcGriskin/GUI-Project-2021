@@ -1,6 +1,8 @@
 <html>
 	<head>
 		<title>GMIT-Games</title>
+		<!-- Drop Down Styling -->
+		<link rel="stylesheet"	type="text/css" href="Scripts/Dropdown.css"/>
 		
 		<!-- Header -->
 		<link rel="stylesheet"	type="text/css" href="Scripts/Header.css"/>
@@ -10,11 +12,65 @@
 	
 	</head>
 	<body>
-		<!-- Header -->
-		<div class="navbar navbar-expand-lg navbar-light .bg-light" id="Header">
-			<img src="Images/Logo.png">
-		</div>
-		<!-- End of Header -->
+		<!-- Start of Header Menu -->
+<div class="navbar navbar-expand-lg navbar-light .bg-light" id="Header">
+	<img src="Images/Logo.png">
+	<div class="container-fluid">
+					<a class="text-dark navbar-brand" href="Home.html">Home</a>
+					
+					<!-- Something to do with short browser width and it turns the bar into a drop down. -->
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+				<!-- Navigation bar -->
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					
+					<!-- Drop Down -->
+					<div class="dropdown">
+						<button class="dropbtn" id="buttonDropDownMenu">Browse</button>
+						<div class="dropdown-content">
+							<a href="GenreGames/Action.html">Action</a>
+							<a href="GenreGames/Adventure.html">Adventure</a>
+							<a href="GenreGames/MMO.html">MMO Games</a>
+							<a href="GenreGames/Racing.html">Racing</a>
+							<a href="GenreGames/Strategy.html">Strategy</a>
+						</div>
+					</div>
+					
+						<!-- Whats on sale -->
+						<li class="navbar-item">
+							<a class="nav-link text-dark navbar-brand" href="WhatsOnSale.html">What's On Sale</a>
+						</li>
+						
+						<!-- Best Sellers -->
+						<li class="navbar-item">
+							<a class="nav-link text-dark navbar-brand" id="bestSellerItemMenu" href="BestSellers.html">Best Sellers</a>
+						</li>
+						
+						<!-- Logout -->
+						<li class="navbar-item">
+							<a class="nav-link text-dark navbar-brand" href="Login.html">User Panel</a>
+						</li>
+						
+						<li class="navbar-item">
+							<a href="Cart.html">
+								<img src="Images/Cart.png" class="nav-link text-dark navbar-brand" id="cart">
+							</a>
+						</li>
+						
+						<!-- DOM -->
+						<li class="navbar-item" id="logout">
+							
+						</li>
+
+					</ul>
+					<div id="welcomeMessage"></div>
+				</div>
+	</div>
+</div>
+<!-- End of Header Menu -->
 		
 		<br>
 		<br>
@@ -28,7 +84,6 @@
 	
 		<h2>&emsp; &emsp; Password: &nbsp;<input type="password" id="passwordInput" size="26"></h2>
 		<h3>&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<input type="checkbox" onclick="showPassword()">&nbsp;&nbsp;Show Password</h3>
-	
 		<br>
 		<br>
 	
@@ -41,20 +96,23 @@
 
 
 	</body>
+	<script type="text/javascript" src="Scripts/JavaScript/LoginDetectionDOM.js"></script>
 	<script>
-		<!-- USERNAMES AND PASSWORDS -->
-		var user = ["gamer312", "weirdturtle", "username"]
-		var pass = ["easygames", "thebigbox", "password"]
+	type="text/javascript"
+		//USERNAMES AND PASSWORDS (A.H-L)
+		var user = ["gamer312", "weirdturtle", "username"];
+		var pass = ["easygames", "thebigbox", "password"];
 		
-		<!-- FUNCTION FOR LOGIN BUTTON -->
+		
+		//FUNCTION FOR LOGIN BUTTON (A.H-L)
 		function login(){
-			var username = document.getElementById('usernameInput').value
-			var password = document.getElementById('passwordInput').value
-			var correctLogin = 0; 
-			<!-- THIS IS A VARIABLE TO TEST WHETHER AT LEAST ONE OF THE LOGIN DETAILS MATCHES THE INPUT, -->
-			<!-- if it is 0 then the username and password are incorrect, -->
-			<!-- if it is 1 then the user and password are both correct -->
-			<!-- and if it is 2 then the password is incorrect but the user is -->
+			var username = document.getElementById('usernameInput').value;
+			var password = document.getElementById('passwordInput').value; 
+			/*THIS IS A VARIABLE TO TEST WHETHER AT LEAST ONE OF THE LOGIN DETAILS MATCHES THE INPUT,
+			if it is 0 then the username and password are incorrect,
+			if it is 1 then the user and password are both correct
+			and if it is 2 then the password is incorrect but the user is */
+			var correctLogin = 0;
 			
 			for(var i = 0; i <= 2; i++)
 				{
@@ -73,25 +131,32 @@
 			}
 			if(correctLogin == 1)
 			{
-				alert("CORRECT LOGIN")
-				location.href = 'Home.html'
+				alert("CORRECT LOGIN");
+
 			}
 			else if(correctLogin == 2)
 			{
-				alert("INCORRECT PASSWORD")
+				alert("INCORRECT PASSWORD");
 			}
 			else if(correctLogin == 0)
 			{
-				alert("INCORRECT DETAILS")
+				alert("INCORRECT DETAILS");
 			}
 			else
 			{
-				alert("ERROR")
+				alert("ERROR");
+			}
+			
+			//setting username to a localStorage when successfully logged in (C.McGr)
+			var sessionUsername = document.getElementById('usernameInput').value;
+			if(correctLogin == 1)
+			{
+				localStorage.setItem('Username', sessionUsername);
 			}
 		}
-		var isUsernameCorrect = 0; <!-- VAR TO SEE IF THE USERNAME ENTERED IS IN THE ARRAY -->
+		var isUsernameCorrect = 0; //VAR TO SEE IF THE USERNAME ENTERED IS IN THE ARRAY (A.H-L)
 		function forgotPassword(){
-			var username = document.getElementById('usernameInput').value
+			var username = document.getElementById('usernameInput').value;
 			for(var i = 0; i <= 2; i++)
 			{
 				if(username == user[i])
@@ -107,27 +172,27 @@
 			}
 			if(isUsernameCorrect == 1)
 			{
-				alert("PASSWORD: " + pass[tempPassword])
+				alert("PASSWORD: " + pass[tempPassword]);
 			}
 			else
 			{
-				alert("USERNAME NOT FOUND")
+				alert("USERNAME NOT FOUND");
 			}
+		}
 			
-			
-	<!--Show Password-->	
+	//Show Password	(C.McGr)
 		function showPassword()
 			{
 				var x = document.getElementById("passwordInput");
-				if (x.type === "password")
+				if (x.type == "password")
 				{
 					x.type = "text";
 				}
 				else 
 				{
-				x.type = "password";
+					x.type = "password";
 				}
 			}
-		}
+	<!-- End of login -->
 	</script>
 </html>
