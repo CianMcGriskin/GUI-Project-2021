@@ -1,3 +1,7 @@
+/*Start of grid styling (C.McGr)*/
+
+/* 	Styling for grid - displays a grid, creates 5 columns covering 20% each, creates a grid gap of 5px and
+	includes padding for styling*/
 .grid {
   display: grid;
   grid-template-columns: repeat(5, 20%);
@@ -5,6 +9,8 @@
   padding: 25px 20px 25px 20px;
 }
 
+/* 	Styling for columns - aligns text to center, creates a box shadow effect, sets a max width,
+	automatically defines margin and uses and font: arial*/
 .column
 {
 	text-align: center;
@@ -14,23 +20,21 @@
 	font-family: arial;
 }
 
+/* 	Image styling - sets a limit to width and height and aligns text to center */
 .image
 {
-	opacity: 1;
 	width: 200px;
 	height: 266.06px;
 	text-align: center;
-	border-color: #ba2525;
-	backface-visibility: hidden;
 }
 
-
-
+/* Price styling */
 .price {
   color: grey;
   font-size: 22px;
 }
 
+/* Styling for add to cart button - no border, no outline of border, cursor changes when over the button. */
 .column button {
   border: none;
   outline: 0;
@@ -43,6 +47,9 @@
   font-size: 18px;
 }
 
+/* Adds a glow effect when hovering over add to cart button */
 .column button:hover {
   opacity: 0.7;
 }
+
+/*End of grid styling (C.McGr)*/
