@@ -12,7 +12,7 @@
 	
 	</head>
 	<body>
-		<!-- Start of Header Menu -->
+		<!-- Start of Header Menu (C.McGr)-->
 <div class="navbar navbar-expand-lg navbar-light .bg-light" id="Header">
 	<img src="Images/Logo.png">
 	<div class="container-fluid">
@@ -49,9 +49,9 @@
 							<a class="nav-link text-dark navbar-brand" id="bestSellerItemMenu" href="BestSellers.html">Best Sellers</a>
 						</li>
 						
-						<!-- Logout -->
+						<!-- User Panel -->
 						<li class="navbar-item">
-							<a class="nav-link text-dark navbar-brand" href="Login.html">User Panel</a>
+							<b><a class="nav-link text-dark navbar-brand" href="Login.html">User Panel</a></b>
 						</li>
 						
 						<li class="navbar-item">
@@ -76,7 +76,7 @@
 		<br>
 		<br>
 		
-		<!-- Username and password input boxes -->
+		<!-- Username and password input boxes (A.H-L)-->
 		<h2>&emsp; &emsp; Username: <input type="text" id="usernameInput" size="26"></h2>
 		<!-- &emsp; tabs text in and &nbsp puts in a space -->
 		<br>
@@ -87,7 +87,7 @@
 		<br>
 		<br>
 	
-		<!-- "Login" and "Forgot my Password" buttons -->
+		<!-- "Login" and "Forgot my Password" buttons (A.H-L)-->
 		<h2>
 			&emsp;&emsp;&nbsp;&nbsp;<button style="height:70px; width=40px;" onclick="login()">&emsp;Login&emsp;</button>
 			
@@ -132,7 +132,7 @@
 			if(correctLogin == 1)
 			{
 				alert("CORRECT LOGIN");
-
+				window.location.href="Home.html";
 			}
 			else if(correctLogin == 2)
 			{
