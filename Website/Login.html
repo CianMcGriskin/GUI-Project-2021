@@ -89,7 +89,7 @@
 	
 		<!-- "Login" and "Forgot my Password" buttons (A.H-L)-->
 		<h2>
-			&emsp;&emsp;&nbsp;&nbsp;<button style="height:70px; width=40px;" onclick="login()">&emsp;Login&emsp;</button>
+			&emsp;&emsp;&nbsp;&nbsp;<button style="height:70px; width=40px;" id="loginButton" onclick="login()">&emsp;Login&emsp;</button>
 			
 			&emsp;&emsp;<button style="height:70px; width=40px;" onclick="forgotPassword()">&emsp;Forgot my Password&emsp;</button>
 		</h2>
@@ -195,6 +195,15 @@
 					x.type = "password";
 				}
 			}
+	//When clicking enter on the keyboard it will try logging in (A.H-L)
+	if(localStorage.getItem("Username") == "null"){ //errors occur on websites other than User panel when this is not there
+	var input = document.getElementById("passwordInput");
+	input.addEventListener("keyup", function(event) {
+	if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("loginButton").click();
+  }
+});}
 	<!-- End of login -->
 	</script>
 </html>

@@ -36,8 +36,8 @@
 			
 			//changes login page to an information center for your profile (A.H-L)
 			if(document.getElementById('loginPage') != null) //errors occur on websites other than User panel when this is not there
-			
-			let tempCoveredPassword = ""; 
+			{
+			var tempCoveredPassword = ""; 
 			for(var i = 1; i <= localStoragePassword.length;i++)
 			{
 				tempCoveredPassword += "*"
@@ -55,7 +55,7 @@
 				{
 					x.textContent = localStoragePassword;
 				}
-				}
+			}
 			}
 		}
 //End of checking is user is logged in - Javascript
