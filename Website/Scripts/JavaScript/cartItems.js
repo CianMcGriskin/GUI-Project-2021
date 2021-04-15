@@ -534,3 +534,114 @@ function game25(){
 if(localStorage.getItem("25Game") != null && document.getElementById("25")){
 	document.getElementById("25").textContent = "Remove from Cart";
 }
+
+//This is the system for clearing every item from the cart (A.H-L)
+if(document.getElementById("clearCart") != null)
+{
+	document.getElementById("clearCart").addEventListener("click", clearCart);	
+}
+	function clearCart()
+	{
+		
+		if(localStorage.getItem("01Game") != null){
+			localStorage.removeItem("01Game");
+			localStorage.removeItem("01Price");
+		}
+		if(localStorage.getItem("02Game") != null){
+			localStorage.removeItem("02Game");
+			localStorage.removeItem("02Price");
+		}
+		if(localStorage.getItem("03Game") != null){
+			localStorage.removeItem("03Game");
+			localStorage.removeItem("03Price");
+		}
+		if(localStorage.getItem("04Game") != null){
+			localStorage.removeItem("04Game");
+			localStorage.removeItem("04Price");
+		}
+		if(localStorage.getItem("05Game") != null){
+			localStorage.removeItem("05Game");
+			localStorage.removeItem("05Price");
+		}
+		if(localStorage.getItem("06Game") != null){
+			localStorage.removeItem("06Game");
+			localStorage.removeItem("06Price");
+		}
+		if(localStorage.getItem("07Game") != null){
+			localStorage.removeItem("07Game");
+			localStorage.removeItem("07Price");
+		}
+		if(localStorage.getItem("08Game") != null){
+			localStorage.removeItem("08Game");
+			localStorage.removeItem("08Price");
+		}
+		if(localStorage.getItem("09Game") != null){
+			localStorage.removeItem("09Game");
+			localStorage.removeItem("09Price");
+		}
+		if(localStorage.getItem("10Game") != null){
+			localStorage.removeItem("10Game");
+			localStorage.removeItem("10Price");
+		}
+		if(localStorage.getItem("11Game") != null){
+			localStorage.removeItem("11Game");
+			localStorage.removeItem("11Price");
+		}
+		if(localStorage.getItem("12Game") != null){
+			localStorage.removeItem("12Game");
+			localStorage.removeItem("12Price");
+		}
+		if(localStorage.getItem("13Game") != null){
+			localStorage.removeItem("13Game");
+			localStorage.removeItem("13Price");
+		}
+		if(localStorage.getItem("14Game") != null){
+			localStorage.removeItem("14Game");
+			localStorage.removeItem("14Price");
+		}
+		if(localStorage.getItem("15Game") != null){
+			localStorage.removeItem("15Game");
+			localStorage.removeItem("15Price");
+		}
+		if(localStorage.getItem("16Game") != null){
+			localStorage.removeItem("16Game");
+			localStorage.removeItem("16Price");
+		}
+		if(localStorage.getItem("17Game") != null){
+			localStorage.removeItem("17Game");
+			localStorage.removeItem("17Price");
+		}
+		if(localStorage.getItem("18Game") != null){
+			localStorage.removeItem("18Game");
+			localStorage.removeItem("18Price");
+		}
+		if(localStorage.getItem("19Game") != null){
+			localStorage.removeItem("19Game");
+			localStorage.removeItem("19Price");
+		}
+		if(localStorage.getItem("20Game") != null){
+			localStorage.removeItem("20Game");
+			localStorage.removeItem("20Price");
+		}
+		if(localStorage.getItem("21Game") != null){
+			localStorage.removeItem("21Game");
+			localStorage.removeItem("21Price");
+		}
+		if(localStorage.getItem("22Game") != null){
+			localStorage.removeItem("22Game");
+			localStorage.removeItem("22Price");
+		}
+		if(localStorage.getItem("23Game") != null){
+			localStorage.removeItem("23Game");
+			localStorage.removeItem("23Price");
+		}
+		if(localStorage.getItem("24Game") != null){
+			localStorage.removeItem("24Game");
+			localStorage.removeItem("24Price");
+		}
+		if(localStorage.getItem("25Game") != null){
+			localStorage.removeItem("25Game");
+			localStorage.removeItem("25Price");
+		}
+	
+}
