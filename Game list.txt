@@ -1,0 +1,25 @@
+id: 01  Game: CS:GO
+id: 02  Game: Gta5
+id: 03  Game: R6 Siege
+id: 04  Game: Left for dead 2
+id: 05  Game: Warframe
+id: 06  Game: Terraria
+id: 07  Game: Witcher 3
+id: 08  Game: Tomb raider
+id: 09  Game: The forest
+id: 10  Game: Ark
+id: 11  Game: Elder scrolls online
+id: 12  Game: VR chat
+id: 13  Game: Planetside 2
+id: 14  Game: Final Fantasy online
+id: 15  Game: Runescape
+id: 16  Game: Assetto Corsa
+id: 17  Game: BeamNG.drive
+id: 18  Game: F1® 2020
+id: 19  Game: CarX Drift Racing Online
+id: 20  Game: The Crew™ 2
+id: 21  Game: Dota 2
+id: 22  Game: Civilization® V
+id: 23  Game: Age of Empires II (2013)
+id: 24  Game: Bloons TD 6
+id: 25  Game: RimWorld
