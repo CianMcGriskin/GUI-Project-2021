@@ -165,7 +165,7 @@ function game07(){
 	}else 
 	{
 	document.getElementById("07").textContent = "Remove from Cart";
-	localStorage.setItem("07Game", "The Witcher® 3: Wild Hunt");
+	localStorage.setItem("07Game", "The Witcher 3: Wild Hunt");
 	localStorage.setItem("07Price", "29.99");
 	document.getElementById("07").textContent = "Remove from Cart";
 	}
