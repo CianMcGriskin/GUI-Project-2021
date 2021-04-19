@@ -38,3 +38,15 @@
 	text-align: center;
 	padding-left: 0px;
  }
+ 
+ .SaveButton {
+    border: 0;
+    padding: 4px 8px;
+    background-color: #12b007;
+    color: #fff;
+    font-family: $font-bold;
+    font-size: 12px;
+    border-radius: 3px;
+	margin-top: 7px;
+  }
+  
