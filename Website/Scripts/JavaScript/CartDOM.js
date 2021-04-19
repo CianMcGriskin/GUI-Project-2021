@@ -8,29 +8,29 @@ var RS6 = localStorage.getItem("03Game");
 var L4D = localStorage.getItem("04Game");
 var warframe = localStorage.getItem("05Game");
 
+let price = localStorage.getItem("01Price");
 	//CSGO
 	if(CSGO == "Counter-Strike Global Offensive")
 	{
 		let name = CSGO;
-		let price = localStorage.getItem("01Price");
-		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/CSGO.webp"></td>' + '<td>' + name +'</td>' + '<td>' + price + '</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValue" value="1" min="1"></div></td>' + '<td><button class="remove-product" onclick="removeCSGO()">Remove</button></td>';
-		
-		if(document.getElementById("quantityValue").value > 1)
-		{
-			alert("test");
-			document.getElementById("quantityValue").value;
-			var totalPrice = price * x;
-		}
-		
-		
-		function removeCSGO()
+		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/CSGO.webp"></td>' + '<td>' + name +'</td>' + '<td>' + price + '</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValue" value="1" min="1"></div> <button class="SaveButton" onclick="saveButton()">Save</button></td>' + '<td><button class="remove-product" onclick="removeCSGO()">Remove</button></td>' + '<td>'+ price + '</td></tr>';
+	}
+	
+	function removeCSGO()
 		{
 			localStorage.removeItem("01Game");
 			localStorage.removeItem("01Price");
 			location.reload();
 		}
-	}
-	
+		
+	function saveButton()
+		{
+			let x = document.getElementById("quantityValue").value;
+			var totalPrice = price * x;
+			alert(totalPrice);
+			customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/CSGO.webp"></td>' + '<td>' + name +'</td>' + '<td>' + price + '</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValue" value="1" min="1"></div> <button class="SaveButton" onclick="saveButton()">Save</button></td>' + '<td><button class="remove-product" onclick="removeCSGO()">Remove</button></td>' + '<td>'+ totalPrice + '</td></tr>';
+		}
+		
 	//GTA5
 	if(GTA5 == "Grand Theft Auto V")
 	{
