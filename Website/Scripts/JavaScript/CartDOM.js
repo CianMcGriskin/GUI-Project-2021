@@ -2,6 +2,7 @@
 var customers = document.getElementById('customers');
 
 //Game
+//Item Name Variables
 var CSGO = localStorage.getItem("01Game");
 var GTA5 = localStorage.getItem("02Game");
 var RS6 = localStorage.getItem("03Game");
@@ -9,6 +10,7 @@ var L4D = localStorage.getItem("04Game");
 var warframe = localStorage.getItem("05Game");
 
 //Price
+//Item Price Variables
 var CSGOprice = localStorage.getItem("01Price");
 var GTAprice = localStorage.getItem("02Price");
 var RS6price = localStorage.getItem("03Price");
@@ -17,24 +19,30 @@ var L4Dprice = localStorage.getItem("04Price");
 //CSGO
 	if(CSGO == "Counter-Strike Global Offensive")
 	{
+		//Cart html
 		let name = CSGO;
-		
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/CSGO.webp"></td>' + '<td>' + name +'</td>' + '<td>' + CSGOprice + '</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValue" value="1" min="1"></div> <button class="SaveButton" onclick="saveButtonCSGO()">Save</button></td>' + '<td><button class="remove-product" onclick="removeCSGO()">Remove</button></td>' + '<td id="totalPrice">' + CSGOprice + '</td></tr>';
 	}
 	
 	function removeCSGO()
 	{
+		//Remove CSGO from localStorage
 		localStorage.removeItem("01Game");
 		localStorage.removeItem("01Price");
 		location.reload();
 	}
-		
+	
+	//Still need to work on changing quantity to H2 and changing the quantity so it stays permanently with localStorage
 	function saveButtonCSGO()
 	{
 		let totalPriceContent = document.getElementById("totalPrice");
 		let x = document.getElementById("quantityValue").value;
 		let totalPrice = CSGOprice * x;
-		totalPriceContent.textContent = totalPrice;
+		
+		localStorage.setItem("01TotalPrice", totalPrice);
+		let z = localStorage.getItem("01TotalPrice");
+		
+		totalPriceContent.textContent = z;
 	}
 //End of CSGO
 
@@ -108,18 +116,28 @@ function saveButtonL4D()
 }
 //End of L4D
 	
-	if(warframe == "Warframe")
-	{
-		let name = warframe;
-		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/Warframe.png"></td>' + '<td>' + name +'</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValue" value="1" min="1"></div></td>' + '<td>' + price + '</td>' + '<td><button class="remove-product" onclick="removeWarframe()">Remove</button></td>' + '</tr>';
-	
-		function removeWarframe()
-		{
-			localStorage.removeItem("05Game");
-			localStorage.removeItem("05Price");
-			location.reload();
-		}
-	}
+//Warframe
+if(warframe == "Warframe")
+{
+	let name = warframe;
+	customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/warframe.png"></td>' + '<td>' + name +'</td>' + '<td>' + warframeprice + '</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValuewarframe" value="1" min="1"></div> <button class="SaveButton" onclick="saveButtonwarframe()">Save</button></td>' + '<td><button class="remove-product" onclick="removewarframe()">Remove</button></td>' + '<td id="totalPricewarframe">' + warframeprice + '</td></tr>';
+}
+
+function removewarframe()
+{
+	localStorage.removeItem("04Game");
+	localStorage.removeItem("04Price");
+	location.reload();
+}
+
+function saveButtonwarframe()
+{
+	let totalPriceContentWarframe = document.getElementById("totalPriceWarframe");
+	let x = document.getElementById("quantityValueWarframe").value;
+	let totalPricewarframe = warframePrice * x;
+	totalPriceContentwarframe.textContent = totalPriceWarframe;
+}
+//End of Warframe
 //End of Action
 
 //Adventure
