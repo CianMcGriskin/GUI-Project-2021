@@ -54,3 +54,38 @@ a:hover
 {
 	color: #ba2525;
 }
+
+#loginPage
+{
+	text-align: center;
+	zoom: 95%;
+}
+
+input[type="text"]::placeholder {  
+	text-align: center; 
+} 
+			
+input[type="password"]::placeholder {            
+	text-align: center; 
+} 
+
+#loginButton{
+    border: 0;
+    padding: 16px 24px;
+    background-color: #12b007;
+    color: #fff;
+    font-family: $font-bold;
+    font-size: 24px;
+    border-radius: 10px;
+	margin-bottom: 10px;
+  }
+  
+ #ForgetButton{
+	border: 0;
+    padding: 8px 12px;
+    background-color: #ba2525;
+    color: #fff;
+    font-family: $font-bold;
+    font-size: 16px;
+    border-radius: 10px;
+  }

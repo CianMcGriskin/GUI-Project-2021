@@ -72,26 +72,22 @@
 </div>
 <!-- End of Header Menu -->
 	<div id="loginPage">
-		<br>
-		<br>
-		<br>
+		<img src="Images/userIcon.png" alt="User Icon" style="align-items: center;">
 		
 		<!-- Username and password input boxes (A.H-L)-->
-		<h2>&emsp; &emsp; Username: <input type="text" id="usernameInput" size="26"></h2>
+		<h2><input type="text" id="usernameInput" placeholder="Username" size="26"><h2>
 		<!-- &emsp; tabs text in and &nbsp puts in a space -->
 		<br>
-		<br>
-	
-		<h2>&emsp; &emsp; Password: &nbsp;<input type="password" id="passwordInput" size="26"></h2>
-		<h3>&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<input type="checkbox" onclick="showPassword()">&nbsp;&nbsp;Show Password</h3>
+		<h2><input type="password" placeholder="Password" id="passwordInput" size="26"></h2>
+		<input type="checkbox" onclick="showPassword()">&nbsp;&nbsp;Show Password
 		<br>
 		<br>
 	
 		<!-- "Login" and "Forgot my Password" buttons (A.H-L)-->
 		<h2>
-			&emsp;&emsp;&nbsp;&nbsp;<button style="height:70px; width=40px;" id="loginButton" onclick="login()">&emsp;Login&emsp;</button>
-			
-			&emsp;&emsp;<button style="height:70px; width=40px;" onclick="forgotPassword()">&emsp;Forgot my Password&emsp;</button>
+			<button style="height:70px; width=40px;" id="loginButton" onclick="login()">Login</button>
+			<br>
+			<button style="height:70px; width=40px;" id="ForgetButton" onclick="forgotPassword()">I Forgot my Password</button>
 		</h2>
 
 	</div>
