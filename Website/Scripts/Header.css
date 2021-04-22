@@ -1,3 +1,4 @@
+/* Header.css (C.McGr)*/
 /*Creates a bottom red line underneth the navigation bar*/
 #Header
 {
@@ -55,10 +56,10 @@ a:hover
 	color: #ba2525;
 }
 
+/*Login page*/
 #loginPage
 {
 	text-align: center;
-	zoom: 95%;
 }
 
 input[type="text"]::placeholder {  
