@@ -1,39 +1,54 @@
 //Getting all the id tags for each "Add to cart" button (A.H-L)
 if(document.getElementById("01") != null){ //This makes it so this code only works on the page this code is made for
-document.getElementById("01").addEventListener("click", game01);
-document.getElementById("02").addEventListener("click", game02);
-document.getElementById("03").addEventListener("click", game03);
-document.getElementById("04").addEventListener("click", game04);
-document.getElementById("05").addEventListener("click", game05);
-}
-if(document.getElementById("06") != null){ //This makes it so this code only works on the page this code is made for
-document.getElementById("06").addEventListener("click", game06);
-document.getElementById("07").addEventListener("click", game07);
-document.getElementById("08").addEventListener("click", game08);
-document.getElementById("09").addEventListener("click", game09);
-document.getElementById("10").addEventListener("click", game10);
-}
-if(document.getElementById("11") != null){ //This makes it so this code only works on the page this code is made for
-document.getElementById("11").addEventListener("click", game11);
-document.getElementById("12").addEventListener("click", game12);
-document.getElementById("13").addEventListener("click", game13);
-document.getElementById("14").addEventListener("click", game14);
-document.getElementById("15").addEventListener("click", game15);
-}
-if(document.getElementById("16") != null){ //This makes it so this code only works on the page this code is made for
-document.getElementById("16").addEventListener("click", game16);
-document.getElementById("17").addEventListener("click", game17);
-document.getElementById("18").addEventListener("click", game18);
-document.getElementById("19").addEventListener("click", game19);
-document.getElementById("20").addEventListener("click", game20);
-}
-if(document.getElementById("21") != null){ //This makes it so this code only works on the page this code is made for
-document.getElementById("21").addEventListener("click", game21);
-document.getElementById("22").addEventListener("click", game22);
-document.getElementById("23").addEventListener("click", game23);
-document.getElementById("24").addEventListener("click", game24);
-document.getElementById("25").addEventListener("click", game25);
-}
+document.getElementById("01").addEventListener("click", game01);}
+if(document.getElementById("02") != null){ 
+document.getElementById("02").addEventListener("click", game02);}
+if(document.getElementById("03") != null){ 
+document.getElementById("03").addEventListener("click", game03);}
+if(document.getElementById("04") != null){ 
+document.getElementById("04").addEventListener("click", game04);}
+if(document.getElementById("05") != null){ 
+document.getElementById("05").addEventListener("click", game05);}
+if(document.getElementById("06") != null){ 
+document.getElementById("06").addEventListener("click", game06);}
+if(document.getElementById("07") != null){ 
+document.getElementById("07").addEventListener("click", game07);}
+if(document.getElementById("08") != null){ 
+document.getElementById("08").addEventListener("click", game08);}
+if(document.getElementById("09") != null){ 
+document.getElementById("09").addEventListener("click", game09);}
+if(document.getElementById("10") != null){ 
+document.getElementById("10").addEventListener("click", game10);}
+if(document.getElementById("11") != null){ 
+document.getElementById("11").addEventListener("click", game11);}
+if(document.getElementById("12") != null){ 
+document.getElementById("12").addEventListener("click", game12);}
+if(document.getElementById("13") != null){
+document.getElementById("13").addEventListener("click", game13);}
+if(document.getElementById("14") != null){
+document.getElementById("14").addEventListener("click", game14);}
+if(document.getElementById("15") != null){
+document.getElementById("15").addEventListener("click", game15);}
+if(document.getElementById("16") != null){ 
+document.getElementById("16").addEventListener("click", game16);}
+if(document.getElementById("17") != null){
+document.getElementById("17").addEventListener("click", game17);}
+if(document.getElementById("18") != null){
+document.getElementById("18").addEventListener("click", game18);}
+if(document.getElementById("19") != null){
+document.getElementById("19").addEventListener("click", game19);}
+if(document.getElementById("20") != null){
+document.getElementById("20").addEventListener("click", game20);}
+if(document.getElementById("21") != null){ 
+document.getElementById("21").addEventListener("click", game21);}
+if(document.getElementById("22") != null){
+document.getElementById("22").addEventListener("click", game22);}
+if(document.getElementById("23") != null){
+document.getElementById("23").addEventListener("click", game23);}
+if(document.getElementById("24") != null){
+document.getElementById("24").addEventListener("click", game24);}
+if(document.getElementById("25") != null){
+document.getElementById("25").addEventListener("click", game25);}
 
 function game01(){
 	if(document.getElementById("01").textContent == "Remove from Cart")

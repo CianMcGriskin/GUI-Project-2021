@@ -125,8 +125,8 @@ if(warframe == "Warframe")
 
 function removewarframe()
 {
-	localStorage.removeItem("04Game");
-	localStorage.removeItem("04Price");
+	localStorage.removeItem("05Game");
+	localStorage.removeItem("05Price");
 	location.reload();
 }
 
@@ -155,15 +155,21 @@ var ARKprice = localStorage.getItem("10Price");
 
 if(terraria == "Terraria")
 	{
-		let name = terraria;
-		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Adventure/GameImages/Terraria.webp"></td>' + '<td>' + name +'</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValue" value="1" min="1"></div></td>' + '<td>' + warframeprice + '</td>' + '<td><button class="remove-product" onclick="removeTerraria()">Remove</button></td>' + '</tr>';
-	
-		function removeTerraria()
-		{
+	let name = terraria;
+	customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Adventure/GameImages/Terraria.webp"></td>' + '<td>' + name +'</td>' + '<td>' + terrariaprice +'</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValue" value="1" min="1"></div></td>' + '<td><button class="remove-product" onclick="removeTerraria()">Remove</button></td>' + '<td id="totalPriceterraria">' + terrariaprice + '</td></tr>';
+	}
+function removeTerraria()
+	{
 			localStorage.removeItem("06Game");
 			localStorage.removeItem("06Price");
 			location.reload();
-		}
+	}
+function saveButtonL4D()
+	{
+			let totalPriceContentL4D = document.getElementById("totalPriceL4D");
+			let x = document.getElementById("quantityValueL4D").value;
+			let totalPriceL4D = L4Dprice * x;
+			totalPriceContentL4D.textContent = totalPriceL4D;
 	}
 	
 if(witcher3 == "The Witcher 3: Wild Hunt")
