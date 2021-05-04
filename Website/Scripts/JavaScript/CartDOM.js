@@ -147,6 +147,12 @@ var TR = localStorage.getItem("08Game");
 var TForest = localStorage.getItem("09Game");
 var ARK = localStorage.getItem("10Game");
 
+var terrariaprice = localStorage.getItem("06Price");
+var witcher3price = localStorage.getItem("07Price");
+var TRprice = localStorage.getItem("08Price");
+var TForestprice = localStorage.getItem("09Price");
+var ARKprice = localStorage.getItem("10Price");
+
 if(terraria == "Terraria")
 	{
 		let name = terraria;
