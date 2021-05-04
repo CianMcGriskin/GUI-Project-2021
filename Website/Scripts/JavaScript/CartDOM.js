@@ -15,13 +15,13 @@ var CSGOprice = localStorage.getItem("01Price");
 var GTAprice = localStorage.getItem("02Price");
 var RS6price = localStorage.getItem("03Price");
 var L4Dprice = localStorage.getItem("04Price");
-	
+var warframeprice = localStorage.getItem("05Price");	
 //CSGO
 	if(CSGO == "Counter-Strike Global Offensive")
 	{
 		//Cart html
 		let name = CSGO;
-		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/CSGO.webp"></td>' + '<td>' + name +'</td>' + '<td>' + CSGOprice + '</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValue" value="1" min="1"></div> <button class="SaveButton" onclick="saveButtonCSGO()">Save</button></td>' + '<td><button class="remove-product" onclick="removeCSGO()">Remove</button></td>' + '<td id="totalPrice">' + CSGOprice + '</td></tr>';
+		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/CSGO.webp"></td>' + '<td>' + name +'</td>' + '<td>' + CSGOprice + '</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValue" onkeyup="saveButtonCSGO()" value="1" min="1"></div> </td>' + '<td><button class="remove-product" onclick="removeCSGO()">Remove</button></td>' + '<td id="totalPrice">' + CSGOprice + '</td></tr>';
 	}
 	
 	function removeCSGO()
@@ -50,7 +50,7 @@ var L4Dprice = localStorage.getItem("04Price");
 if(GTA5 == "Grand Theft Auto V")
 {
 	let name = GTA5;
-	customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/GTA.webp"></td>' + '<td>' + name +'</td>' + '<td>' + GTAprice + '</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValueGTA" value="1" min="1"></div> <button class="SaveButton" onclick="saveButtonGTA()">Save</button></td>' + '<td><button class="remove-product" onclick="removeGTA()">Remove</button></td>' + '<td id="totalPriceGTA">' + GTAprice + '</td></tr>';
+	customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/GTA.webp"></td>' + '<td>' + name +'</td>' + '<td>' + GTAprice + '</td>' + '<td><div id="product-quantity"><input onkeyup="saveButtonGTA()"type="number" id="quantityValueGTA" value="1" min="1"></div></td>' + '<td><button class="remove-product" onclick="removeGTA()">Remove</button></td>' + '<td id="totalPriceGTA">' + GTAprice + '</td></tr>';
 }
 
 function removeGTA()
@@ -73,7 +73,7 @@ function saveButtonGTA()
 if(RS6 == "Rainbow Six Siege")
 {
 	let name = RS6
-	customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/R6.webp"></td>' + '<td>' + name +'</td>' + '<td>' + RS6price + '</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValueRS6" value="1" min="1"></div> <button class="SaveButton" onclick="saveButtonRS6()">Save</button></td>' + '<td><button class="remove-product" onclick="removeRS6()">Remove</button></td>' + '<td id="totalPriceRS6">' + RS6price + '</td></tr>';
+	customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/R6.webp"></td>' + '<td>' + name +'</td>' + '<td>' + RS6price + '</td>' + '<td><div id="product-quantity"><input onkeyup="saveButtonRS6()" type="number" id="quantityValueRS6" value="1" min="1"></div></td>' + '<td><button class="remove-product" onclick="removeRS6()">Remove</button></td>' + '<td id="totalPriceRS6">' + RS6price + '</td></tr>';
 }
 
 function removeRS6()
@@ -97,7 +97,7 @@ function saveButtonRS6()
 if(L4D == "Left For Dead Two")
 {
 	let name = L4D;
-	customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/L4D.jpg"></td>' + '<td>' + name +'</td>' + '<td>' + L4Dprice + '</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValueL4D" value="1" min="1"></div> <button class="SaveButton" onclick="saveButtonL4D()">Save</button></td>' + '<td><button class="remove-product" onclick="removeL4D()">Remove</button></td>' + '<td id="totalPriceL4D">' + L4Dprice + '</td></tr>';
+	customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/L4D.jpg"></td>' + '<td>' + name +'</td>' + '<td>' + L4Dprice + '</td>' + '<td><div id="product-quantity"><input onkeyup="saveButtonL4D()"type="number" id="quantityValueL4D" value="1" min="1"></div></td>' + '<td><button class="remove-product" onclick="removeL4D()">Remove</button></td>' + '<td id="totalPriceL4D">' + L4Dprice + '</td></tr>';
 }
 
 function removeL4D()
@@ -120,7 +120,7 @@ function saveButtonL4D()
 if(warframe == "Warframe")
 {
 	let name = warframe;
-	customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/warframe.png"></td>' + '<td>' + name +'</td>' + '<td>' + warframeprice + '</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValuewarframe" value="1" min="1"></div> <button class="SaveButton" onclick="saveButtonwarframe()">Save</button></td>' + '<td><button class="remove-product" onclick="removewarframe()">Remove</button></td>' + '<td id="totalPricewarframe">' + warframeprice + '</td></tr>';
+	customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/warframe.png"></td>' + '<td>' + name +'</td>' + '<td>' + warframeprice + '</td>' + '<td><div id="product-quantity"><input onkeyup="saveButtonWarframe()" type="number" id="quantityValuewarframe" value="1" min="1"></div></td>' + '<td><button class="remove-product" onclick="removewarframe()">Remove</button></td>' + '<td id="totalPricewarframe">' + warframeprice + '</td></tr>';
 }
 
 function removewarframe()
@@ -130,7 +130,7 @@ function removewarframe()
 	location.reload();
 }
 
-function saveButtonwarframe()
+function saveButtonWarframe()
 {
 	let totalPriceContentWarframe = document.getElementById("totalPriceWarframe");
 	let x = document.getElementById("quantityValueWarframe").value;
@@ -150,7 +150,7 @@ var ARK = localStorage.getItem("10Game");
 if(terraria == "Terraria")
 	{
 		let name = terraria;
-		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Adventure/GameImages/Terraria.webp"></td>' + '<td>' + name +'</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValue" value="1" min="1"></div></td>' + '<td>' + price + '</td>' + '<td><button class="remove-product" onclick="removeTerraria()">Remove</button></td>' + '</tr>';
+		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Adventure/GameImages/Terraria.webp"></td>' + '<td>' + name +'</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValue" value="1" min="1"></div></td>' + '<td>' + warframeprice + '</td>' + '<td><button class="remove-product" onclick="removeTerraria()">Remove</button></td>' + '</tr>';
 	
 		function removeTerraria()
 		{
