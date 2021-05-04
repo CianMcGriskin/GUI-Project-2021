@@ -132,10 +132,10 @@ function removewarframe()
 
 function saveButtonWarframe()
 {
-	let totalPriceContentWarframe = document.getElementById("totalPriceWarframe");
-	let x = document.getElementById("quantityValueWarframe").value;
+	let totalPriceContentwarframe = document.getElementById("totalPricewarframe");
+	let x = document.getElementById("quantityValuewarframe").value;
 	let totalPricewarframe = warframeprice * x;
-	totalPriceContentwarframe.textContent = totalPriceWarframe;
+	totalPriceContentwarframe.textContent = totalPricewarframe;
 }
 //End of Warframe
 //End of Action
