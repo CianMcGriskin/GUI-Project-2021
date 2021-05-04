@@ -134,7 +134,7 @@ function saveButtonWarframe()
 {
 	let totalPriceContentWarframe = document.getElementById("totalPriceWarframe");
 	let x = document.getElementById("quantityValueWarframe").value;
-	let totalPricewarframe = warframePrice * x;
+	let totalPricewarframe = warframeprice * x;
 	totalPriceContentwarframe.textContent = totalPriceWarframe;
 }
 //End of Warframe

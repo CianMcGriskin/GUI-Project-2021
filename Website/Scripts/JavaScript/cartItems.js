@@ -66,7 +66,7 @@ function game02(){
 	{
 	document.getElementById("02").textContent = "Remove from Cart";
 	localStorage.setItem("02Game", "Grand Theft Auto V");
-	localStorage.setItem("02Price", "29.99");
+	localStorage.setItem("02Price", "22.49");
 	document.getElementById("02").textContent = "Remove from Cart";
 	}
 }
@@ -226,7 +226,7 @@ function game10(){
 	{
 	document.getElementById("10").textContent = "Remove from Cart";
 	localStorage.setItem("10Game", "ARK: Survival Evolved");
-	localStorage.setItem("10Price", "54.99");
+	localStorage.setItem("10Price", "46.79");
 	document.getElementById("10").textContent = "Remove from Cart";
 	}
 }
@@ -286,7 +286,7 @@ function game13(){
 	{
 	document.getElementById("13").textContent = "Remove from Cart";
 	localStorage.setItem("13Game", "Planetside 2");
-	localStorage.setItem("13Price", "11.99");
+	localStorage.setItem("13Price", "10.80");
 	document.getElementById("13").textContent = "Remove from Cart";
 	}
 }
@@ -386,7 +386,7 @@ function game18(){
 	{
 	document.getElementById("18").textContent = "Remove from Cart";
 	localStorage.setItem("18Game", "F1® 2020");
-	localStorage.setItem("18Price", "54.99");
+	localStorage.setItem("18Price", "43.99");
 	document.getElementById("18").textContent = "Remove from Cart";
 	}
 }
@@ -486,7 +486,7 @@ function game23(){
 	{
 	document.getElementById("23").textContent = "Remove from Cart";
 	localStorage.setItem("23Game", "Age of Empires II");
-	localStorage.setItem("23Price", "19.99");
+	localStorage.setItem("23Price", "18.99");
 	document.getElementById("23").textContent = "Remove from Cart";
 	}
 }
@@ -540,7 +540,7 @@ if(document.getElementById("clearCart") != null)
 {
 	document.getElementById("clearCart").addEventListener("click", clearCart);	
 }
-	function clearCart()
+	function clearCart() 
 	{
 		
 		if(localStorage.getItem("01Game") != null){
@@ -643,5 +643,5 @@ if(document.getElementById("clearCart") != null)
 			localStorage.removeItem("25Game");
 			localStorage.removeItem("25Price");
 		}
-	
+	location.reload();
 }
