@@ -260,7 +260,7 @@ function game11(){
 	}else 
 	{
 	document.getElementById("11").textContent = "Remove from Cart";
-	localStorage.setItem("11Game", "The Elder Scrolls® Online");
+	localStorage.setItem("11Game", "The Elder Scrolls Online");
 	localStorage.setItem("11Price", "7.99");
 	document.getElementById("11").textContent = "Remove from Cart";
 	}
