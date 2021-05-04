@@ -120,10 +120,10 @@ function saveButtonL4D()
 if(warframe == "Warframe")
 {
 	let name = warframe;
-	customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/warframe.png"></td>' + '<td>' + name +'</td>' + '<td>' + warframeprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonWarframe()" onkeyup="saveButtonWarframe()" type="number" id="quantityValuewarframe" value="1" min="1"></div></td>' + '<td><button class="remove-product" onclick="removewarframe()">Remove</button></td>' + '<td id="totalPricewarframe">' + warframeprice + '</td></tr>';
+	customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/warframe.png"></td>' + '<td>' + name +'</td>' + '<td>' + warframeprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonWarframe()" onkeyup="saveButtonWarframe()" type="number" id="quantityValuewarframe" value="1" min="1"></div></td>' + '<td><button class="remove-product" onclick="removeWarframe()">Remove</button></td>' + '<td id="totalPricewarframe">' + warframeprice + '</td></tr>';
 }
 
-function removewarframe()
+function removeWarframe()
 {
 	localStorage.removeItem("05Game");
 	localStorage.removeItem("05Price");
@@ -156,7 +156,7 @@ var ARKprice = localStorage.getItem("10Price");
 if(terraria == "Terraria")
 	{
 	let name = terraria;
-	customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Adventure/GameImages/Terraria.webp"></td>' + '<td>' + name +'</td>' + '<td>' + terrariaprice +'</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValue" value="1" min="1"></div></td>' + '<td><button class="remove-product" onclick="removeTerraria()">Remove</button></td>' + '<td id="totalPriceterraria">' + terrariaprice + '</td></tr>';
+	customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Adventure/GameImages/Terraria.webp"></td>' + '<td>' + name +'</td>' + '<td>' + terrariaprice +'</td>' + '<td><div id="quantityValueTerraria"><input onkeyup="saveButtonTerraria()" onclick="saveButtonTerraria()" type="number" id="quantityValue" value="1" min="1"></div></td>' + '<td><button class="remove-product" onclick="removeTerraria()">Remove</button></td>' + '<td id="totalPriceTerraria">' + terrariaprice + '</td></tr>';
 	}
 function removeTerraria()
 	{
@@ -164,12 +164,12 @@ function removeTerraria()
 			localStorage.removeItem("06Price");
 			location.reload();
 	}
-function saveButtonL4D()
+function saveButtonTerraria()
 	{
-			let totalPriceContentL4D = document.getElementById("totalPriceL4D");
-			let x = document.getElementById("quantityValueL4D").value;
-			let totalPriceL4D = L4Dprice * x;
-			totalPriceContentL4D.textContent = totalPriceL4D;
+			let totalPriceContentTerraria = document.getElementById("totalPriceTerraria");
+			let x = document.getElementById("quantityValueTerraria").value;
+			let totalPriceTerraria = terrariaprice * x;
+			totalPriceContentTerraria.textContent = totalPriceTerraria;
 	}
 	
 if(witcher3 == "The Witcher 3: Wild Hunt")
