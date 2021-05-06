@@ -400,7 +400,7 @@ function game18(){
 	}else 
 	{
 	document.getElementById("18").textContent = "Remove from Cart";
-	localStorage.setItem("18Game", "F1® 2020");
+	localStorage.setItem("18Game", "F1 2020");
 	localStorage.setItem("18Price", "43.99");
 	document.getElementById("18").textContent = "Remove from Cart";
 	}
@@ -440,7 +440,7 @@ function game20(){
 	}else 
 	{
 	document.getElementById("20").textContent = "Remove from Cart";
-	localStorage.setItem("20Game", "The Crew™ 2");
+	localStorage.setItem("20Game", "The Crew 2");
 	localStorage.setItem("20Price", "49.99");
 	document.getElementById("20").textContent = "Remove from Cart";
 	}
