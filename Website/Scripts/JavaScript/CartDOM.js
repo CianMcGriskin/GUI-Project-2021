@@ -21,7 +21,7 @@ var warframeprice = localStorage.getItem("05Price");
 	{
 		//Cart html
 		let name = CSGO;
-		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/CSGO.webp"></td>' + '<td>' + name +'</td>' + '<td>' + CSGOprice + '</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValue" onkeyup="saveButtonCSGO()" onclick="saveButtonCSGO()" value="1" min="1"></div> </td>' + '<td><button class="remove-product" onclick="removeCSGO()">Remove</button></td>' + '<td id="totalPrice">' + CSGOprice + '</td></tr>';
+		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/CSGO.webp"></td>' + '<td>' + name +'</td>' + '<td>' + CSGOprice + '</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValueCSGO" onkeyup="saveButtonCSGO()" onclick="saveButtonCSGO()" value="1" min="1"></div> </td>' + '<td><button class="remove-product" onclick="removeCSGO()">Remove</button></td>' + '<td id="totalPriceCSGO">' + CSGOprice + '</td></tr>';
 	}
 	
 	function removeCSGO()
@@ -35,14 +35,11 @@ var warframeprice = localStorage.getItem("05Price");
 	//Still need to work on changing quantity to H2 and changing the quantity so it stays permanently with localStorage
 	function saveButtonCSGO()
 	{
-		let totalPriceContent = document.getElementById("totalPrice");
-		let x = document.getElementById("quantityValue").value;
-		let totalPrice = CSGOprice * x;
-		
-		localStorage.setItem("01TotalPrice", totalPrice);
-		let z = localStorage.getItem("01TotalPrice");
-		
-		totalPriceContent.textContent = z;
+		let totalPriceContentCSGO = document.getElementById("totalPriceCSGO");
+		let x = document.getElementById("quantityValueCSGO").value;
+		let totalPriceCSGO = CSGOprice * x;
+		totalPriceCSGO = Math.round(totalPriceCSGO * 100) / 100;
+		totalPriceContentCSGO.textContent = totalPriceCSGO;
 	}
 //End of CSGO
 
@@ -65,6 +62,7 @@ function saveButtonGTA()
 	let totalPriceContentGTA = document.getElementById("totalPriceGTA");
 	let x = document.getElementById("quantityValueGTA").value;
 	let totalPriceGTA = GTAprice * x;
+	totalPriceGTA = Math.round(totalPriceGTA * 100) / 100;
 	totalPriceContentGTA.textContent = totalPriceGTA;
 }
 //End of GTA5
@@ -88,6 +86,7 @@ function saveButtonRS6()
 	let totalPriceContentRS6 = document.getElementById("totalPriceRS6");
 	let x = document.getElementById("quantityValueRS6").value;
 	let totalPriceRS6 = RS6price * x;
+	totalPriceRS6 = Math.round(totalPriceRS6 * 100) / 100;
 	totalPriceContentRS6.textContent = totalPriceRS6;
 }
 //End of RS6
@@ -112,6 +111,7 @@ function saveButtonL4D()
 	let totalPriceContentL4D = document.getElementById("totalPriceL4D");
 	let x = document.getElementById("quantityValueL4D").value;
 	let totalPriceL4D = L4Dprice * x;
+	totalPriceL4D = Math.round(totalPriceL4D * 100) / 100;
 	totalPriceContentL4D.textContent = totalPriceL4D;
 }
 //End of L4D
@@ -135,6 +135,7 @@ function saveButtonWarframe()
 	let totalPriceContentwarframe = document.getElementById("totalPricewarframe");
 	let x = document.getElementById("quantityValuewarframe").value;
 	let totalPricewarframe = warframeprice * x;
+	totalPricewarframe = Math.round(totalPricewarframe * 100) / 100;
 	totalPriceContentwarframe.textContent = totalPricewarframe;
 }
 //End of Warframe
@@ -170,6 +171,7 @@ function saveButtonTerraria()
 			let totalPriceContentTerraria = document.getElementById("totalPriceTerraria");
 			let x = document.getElementById("quantityValueTerraria").value;
 			let totalPriceTerraria = terrariaprice * x;
+			totalPriceTerraria = Math.round(totalPriceterraria * 100) / 100;
 			totalPriceContentTerraria.textContent = totalPriceTerraria;
 	}
 //End of Terraria
@@ -191,6 +193,7 @@ if(witcher3 == "The Witcher 3: Wild Hunt")
 			let totalPriceContentWitcher3 = document.getElementById("totalPriceWitcher3");
 			let x = document.getElementById("quantityValueWitcher3").value;
 			let totalPriceWitcher3 = witcher3price * x;
+			totalPricewitcher3 = Math.round(totalPricewitcher3 * 100) / 100;
 			totalPriceContentWitcher3.textContent = totalPriceWitcher3;
 	}
 //End of Witcher 3
@@ -212,6 +215,7 @@ if(TR == "Tomb Raider")
 			let totalPriceContentTR = document.getElementById("totalPriceTR");
 			let x = document.getElementById("quantityValueTR").value;
 			let totalPriceTR = TRprice * x;
+			totalPriceTR = Math.round(totalPriceTR * 100) / 100;
 			totalPriceContentTR.textContent = totalPriceTR;
 	}
 //End of Tomb Raider
@@ -233,6 +237,7 @@ if(TheForest == "The Forest")
 			let totalPriceContentTheForest = document.getElementById("totalPriceTheForest");
 			let x = document.getElementById("quantityValueTheForest").value;
 			let totalPriceTheForest = TheForestprice * x;
+			totalPriceTheForest = Math.round(totalPriceTheForest * 100) / 100;
 			totalPriceContentTheForest.textContent = totalPriceTheForest;
 	}
 //End fo The Forest
@@ -254,6 +259,7 @@ if(ARK == "ARK: Survival Evolved")
 			let totalPriceContentARK = document.getElementById("totalPriceARK");
 			let x = document.getElementById("quantityValueARK").value;
 			let totalPriceARK = ARKprice * x;
+			totalPriceARK = Math.round(totalPriceARK * 100) / 100;
 			totalPriceContentARK.textContent = totalPriceARK;
 	}
 //End of Ark
@@ -289,6 +295,7 @@ if(elderScrolls == "The Elder Scrolls Online")
 			let totalPriceContentelderScrolls = document.getElementById("totalPriceelderScrolls");
 			let x = document.getElementById("quantityValueelderScrolls").value;
 			let totalPriceelderScrolls = elderScrollsprice * x;
+			totalPriceelderScrolls = Math.round(totalPriceelderScrolls * 100) / 100;
 			totalPriceContentelderScrolls.textContent = totalPriceelderScrolls;
 	}
 //End of Elder Scrolls
@@ -310,6 +317,7 @@ if(VRChat == "VRChat")
 			let totalPriceContentVRChat = document.getElementById("totalPriceVRChat");
 			let x = document.getElementById("quantityValueVRChat").value;
 			let totalPriceVRChat = VRChatprice * x;
+			totalPriceVRChat = Math.round(totalPriceVRChat * 100) / 100;
 			totalPriceContentVRChat.textContent = totalPriceVRChat;
 	}
 //End of VR Chat
@@ -331,6 +339,7 @@ if(Planetside2 == "Planetside 2")
 			let totalPriceContentPlanetside2 = document.getElementById("totalPricePlanetside2");
 			let x = document.getElementById("quantityValuePlanetside2").value;
 			let totalPricePlanetside2 = Planetside2price * x;
+			totalPricePlanetside2 = Math.round(totalPricePlanetside2 * 100) / 100;
 			totalPriceContentPlanetside2.textContent = totalPricePlanetside2;
 	}
 //End of Planetside 2
@@ -352,6 +361,7 @@ if(FinalFantasy == "Final Fantasy XIV")
 			let totalPriceContentFinalFantasy = document.getElementById("totalPriceFinalFantasy");
 			let x = document.getElementById("quantityValueFinalFantasy").value;
 			let totalPriceFinalFantasy = FinalFantasyprice * x;
+			totalPriceFinalFantasy = Math.round(totalPriceFinalFantasy * 100) / 100;
 			totalPriceContentFinalFantasy.textContent = totalPriceFinalFantasy;
 	}
 //End of FinalFantasy
@@ -373,6 +383,253 @@ if(Runescape == "Runescape")
 			let totalPriceContentRunescape = document.getElementById("totalPriceRunescape");
 			let x = document.getElementById("quantityValueRunescape").value;
 			let totalPriceRunescape = Runescapeprice * x;
+			totalPriceRunescape = Math.round(totalPriceRunescape * 100) / 100;
 			totalPriceContentRunescape.textContent = totalPriceRunescape;
 	}
 //End of Runescape
+
+//Racing Games (A.H-L)
+var AssettoCorsa = localStorage.getItem("16Game");
+var BeamNG = localStorage.getItem("17Game");
+var F1 = localStorage.getItem("18Game");
+var CarXDrift = localStorage.getItem("19Game");
+var TheCrew2= localStorage.getItem("20Game");
+
+var AssettoCorsaprice = localStorage.getItem("16Price");
+var BeamNGprice = localStorage.getItem("17Price");
+var F1price = localStorage.getItem("18Price");
+var CarXDriftprice = localStorage.getItem("19Price");
+var TheCrew2price = localStorage.getItem("20Price");
+
+//AssettoCorsa
+if(AssettoCorsa == "Assetto Corsa")
+	{
+		let name = AssettoCorsa;
+		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Racing/GameImages/AssettoCorsa.jpg"></td>' + '<td>' + name +'</td>' + '<td>' + AssettoCorsaprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonAssettoCorsa()" onkeyup="saveButtonAssettoCorsa()" type="number" id="quantityValueAssettoCorsa" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeAssettoCorsa()">Remove</button></td>' + '<td id="totalPriceAssettoCorsa"> ' + AssettoCorsaprice + '</tr>';
+	}
+	function removeAssettoCorsa()
+	{
+		localStorage.removeItem("16Game");
+		localStorage.removeItem("16Price");
+		location.reload();
+	}
+	function saveButtonAssettoCorsa() 
+	{
+			let totalPriceContentAssettoCorsa = document.getElementById("totalPriceAssettoCorsa");
+			let x = document.getElementById("quantityValueAssettoCorsa").value;
+			let totalPriceAssettoCorsa = AssettoCorsaprice * x;
+			totalPriceAssettoCorsa = Math.round(totalPriceAssettoCorsa * 100) / 100;
+			totalPriceContentAssettoCorsa.textContent = totalPriceAssettoCorsa;
+	}
+//End of AssettoCorsa
+
+//BeamNG.Drive
+if(BeamNG == "BeamNG.drive")
+	{
+		let name = BeamNG;
+		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Racing/GameImages/BeamNG.webp"></td>' + '<td>' + name +'</td>' + '<td>' + BeamNGprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonBeamNG()" onkeyup="saveButtonBeamNG()" type="number" id="quantityValueBeamNG" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeBeamNG()">Remove</button></td>' + '<td id="totalPriceBeamNG"> ' + BeamNGprice + '</tr>';
+	}
+	function removeBeamNG()
+	{
+		localStorage.removeItem("17Game");
+		localStorage.removeItem("17Price");
+		location.reload();
+	}
+	function saveButtonBeamNG() 
+	{
+			let totalPriceContentBeamNG = document.getElementById("totalPriceBeamNG");
+			let x = document.getElementById("quantityValueBeamNG").value;
+			let totalPriceBeamNG = BeamNGprice * x;
+			totalPriceBeamNG = Math.round(totalPriceBeamNG * 100) / 100;
+			totalPriceContentBeamNG.textContent = totalPriceBeamNG;
+	}
+//End of BeamNG.Drive
+
+//F1
+if(F1 == "F1 2020")
+	{
+		let name = F1;
+		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Racing/GameImages/F1.jpg"></td>' + '<td>' + name +'</td>' + '<td>' + F1price + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonF1()" onkeyup="saveButtonF1()" type="number" id="quantityValueF1" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeF1()">Remove</button></td>' + '<td id="totalPriceF1"> ' + F1price + '</tr>';
+	}
+	function removeF1()
+	{
+		localStorage.removeItem("18Game");
+		localStorage.removeItem("18Price");
+		location.reload();
+	}
+	function saveButtonF1() 
+	{
+			let totalPriceContentF1 = document.getElementById("totalPriceF1");
+			let x = document.getElementById("quantityValueF1").value;
+			let totalPriceF1 = F1price * x;
+			totalPriceF1 = Math.round(totalPriceF1 * 100) / 100;
+			totalPriceContentF1.textContent = totalPriceF1;
+	}
+//End of F1
+
+//CarXDrift
+if(CarXDrift == "CarX Drift Racing Online")
+	{
+		let name = CarXDrift;
+		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Racing/GameImages/CarX.webp"></td>' + '<td>' + name +'</td>' + '<td>' + CarXDriftprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonCarXDrift()" onkeyup="saveButtonCarXDrift()" type="number" id="quantityValueCarXDrift" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeCarXDrift()">Remove</button></td>' + '<td id="totalPriceCarXDrift"> ' + CarXDriftprice + '</tr>';
+	}
+	function removeCarXDrift()
+	{
+		localStorage.removeItem("19Game");
+		localStorage.removeItem("19Price");
+		location.reload();
+	}
+	function saveButtonCarXDrift() 
+	{
+			let totalPriceContentCarXDrift = document.getElementById("totalPriceCarXDrift");
+			let x = document.getElementById("quantityValueCarXDrift").value;
+			let totalPriceCarXDrift = CarXDriftprice * x;
+			totalPriceCarXDrift = Math.round(totalPriceCarXDrift * 100) / 100;
+			totalPriceContentCarXDrift.textContent = totalPriceCarXDrift;
+	}
+	//End of CarXDrift
+	
+	//TheCrew2
+if(TheCrew2 == "The Crew 2")
+	{
+		let name = TheCrew2;
+		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Racing/GameImages/TheCrew2.webp"></td>' + '<td>' + name +'</td>' + '<td>' + TheCrew2price + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonTheCrew2()" onkeyup="saveButtonTheCrew2()" type="number" id="quantityValueTheCrew2" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeTheCrew2()">Remove</button></td>' + '<td id="totalPriceTheCrew2"> ' + TheCrew2price + '</tr>';
+	}
+	function removeTheCrew2()
+	{
+		localStorage.removeItem("20Game");
+		localStorage.removeItem("20Price");
+		location.reload();
+	}
+	function saveButtonTheCrew2() 
+	{
+			let totalPriceContentTheCrew2 = document.getElementById("totalPriceTheCrew2");
+			let x = document.getElementById("quantityValueTheCrew2").value;
+			let totalPriceTheCrew2 = TheCrew2price * x;
+			totalPriceTheCrew2 = Math.round(totalPriceTheCrew2 * 100) / 100;
+			totalPriceContentTheCrew2.textContent = totalPriceTheCrew2;
+	}
+//End of TheCrew2
+
+//Strategy Games (A.H-L)
+var Dota2 = localStorage.getItem("21Game");
+var CivilizationV = localStorage.getItem("22Game");
+var AgeOfEmpiresII = localStorage.getItem("23Game");
+var BTD6 = localStorage.getItem("24Game");
+var RimWorld= localStorage.getItem("25Game");
+
+var Dota2price = localStorage.getItem("21Price");
+var CivilizationVprice = localStorage.getItem("22Price");
+var AgeOfEmpiresIIprice = localStorage.getItem("23Price");
+var BTD6price = localStorage.getItem("24Price");
+var RimWorldprice = localStorage.getItem("25Price");
+
+//Dota2
+if(Dota2 == "Dota 2")
+	{
+		let name = Dota2;
+		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Strategy/GameImages/Dota2.jpg"></td>' + '<td>' + name +'</td>' + '<td>' + Dota2price + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonDota2()" onkeyup="saveButtonDota2()" type="number" id="quantityValueDota2" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeDota2()">Remove</button></td>' + '<td id="totalPriceDota2"> ' + Dota2price + '</tr>';
+	}
+	function removeDota2()
+	{
+		localStorage.removeItem("21Game");
+		localStorage.removeItem("21Price");
+		location.reload();
+	}
+	function saveButtonDota2() 
+	{
+			let totalPriceContentDota2 = document.getElementById("totalPriceDota2");
+			let x = document.getElementById("quantityValueDota2").value;
+			let totalPriceDota2 = Dota2price * x;
+			totalPriceDota2 = Math.round(totalPriceDota2 * 100) / 100;
+			totalPriceContentDota2.textContent = totalPriceDota2;
+	}
+//End of Dota2
+
+//CivilizationV
+if(CivilizationV == "Civilization V")
+	{
+		let name = CivilizationV;
+		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Strategy/GameImages/Civilization.webp"></td>' + '<td>' + name +'</td>' + '<td>' + CivilizationVprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonCivilizationV()" onkeyup="saveButtonCivilizationV()" type="number" id="quantityValueCivilizationV" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeCivilizationV()">Remove</button></td>' + '<td id="totalPriceCivilizationV"> ' + CivilizationVprice + '</tr>';
+	}
+	function removeCivilizationV()
+	{
+		localStorage.removeItem("22Game");
+		localStorage.removeItem("22Price");
+		location.reload();
+	}
+	function saveButtonCivilizationV() 
+	{
+			let totalPriceContentCivilizationV = document.getElementById("totalPriceCivilizationV");
+			let x = document.getElementById("quantityValueCivilizationV").value;
+			let totalPriceCivilizationV = CivilizationVprice * x;
+			totalPriceCivilizationV = Math.round(totalPriceCivilizationV * 100) / 100;
+			totalPriceContentCivilizationV.textContent = totalPriceCivilizationV;
+	}
+//End of CivilizationV
+
+//AgeOfEmpiresII
+if(AgeOfEmpiresII == "Age of Empires II")
+	{
+		let name = AgeOfEmpiresII;
+		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Strategy/GameImages/AgeOfEmpires.webp"></td>' + '<td>' + name +'</td>' + '<td>' + AgeOfEmpiresIIprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonAgeOfEmpiresII()" onkeyup="saveButtonAgeOfEmpiresII()" type="number" id="quantityValueAgeOfEmpiresII" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeAgeOfEmpiresII()">Remove</button></td>' + '<td id="totalPriceAgeOfEmpiresII"> ' + AgeOfEmpiresIIprice + '</tr>';
+	}
+	function removeAgeOfEmpiresII()
+	{
+		localStorage.removeItem("23Game");
+		localStorage.removeItem("23Price");
+		location.reload();
+	}
+	function saveButtonAgeOfEmpiresII() 
+	{
+			let totalPriceContentAgeOfEmpiresII = document.getElementById("totalPriceAgeOfEmpiresII");
+			let x = document.getElementById("quantityValueAgeOfEmpiresII").value;
+			let totalPriceAgeOfEmpiresII = AgeOfEmpiresIIprice * x;
+			totalPriceAgeOfEmpiresII = Math.round(totalPriceAgeOfEmpiresII * 100) / 100;
+			totalPriceContentAgeOfEmpiresII.textContent = totalPriceAgeOfEmpiresII;
+	}
+//End of AgeOfEmpiresII
+
+//BTD6
+if(BTD6 == "Bloons TD6")
+	{
+		let name = BTD6;
+		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Strategy/GameImages/BloonsTD6.webp"></td>' + '<td>' + name +'</td>' + '<td>' + BTD6price + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonBTD6()" onkeyup="saveButtonBTD6()" type="number" id="quantityValueBTD6" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeBTD6()">Remove</button></td>' + '<td id="totalPriceBTD6"> ' + BTD6price + '</tr>';
+	}
+	function removeBTD6()
+	{
+		localStorage.removeItem("24Game");
+		localStorage.removeItem("24Price");
+		location.reload();
+	}
+	function saveButtonBTD6() 
+	{
+			let totalPriceContentBTD6 = document.getElementById("totalPriceBTD6");
+			let x = document.getElementById("quantityValueBTD6").value;
+			let totalPriceBTD6 = BTD6price * x;
+			totalPriceBTD6 = Math.round(totalPriceBTD6 * 100) / 100;
+			totalPriceContentBTD6.textContent = totalPriceBTD6;
+	}
+//End of BTD6
+
+//RimWorld
+if(RimWorld == "RimWorld")
+	{
+		let name = RimWorld;
+		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Strategy/GameImages/RimWorld.webp"></td>' + '<td>' + name +'</td>' + '<td>' + RimWorldprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonRimWorld()" onkeyup="saveButtonRimWorld()" type="number" id="quantityValueRimWorld" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeRimWorld()">Remove</button></td>' + '<td id="totalPriceRimWorld"> ' + RimWorldprice + '</tr>';
+	}
+	function removeRimWorld()
+	{
+		localStorage.removeItem("25Game");
+		localStorage.removeItem("25Price");
+		location.reload();
+	}
+	function saveButtonRimWorld() 
+	{
+			let totalPriceContentRimWorld = document.getElementById("totalPriceRimWorld");
+			let x = document.getElementById("quantityValueRimWorld").value;
+			let totalPriceRimWorld = RimWorldprice * x;
+			totalPriceRimWorld = Math.round(totalPriceRimWorld * 100) / 100;
+			totalPriceContentRimWorld.textContent = totalPriceRimWorld;
+	}
+//End of RimWorld
