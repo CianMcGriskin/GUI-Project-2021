@@ -15,11 +15,11 @@ price: €09.99 id: 14  Game: Final Fantasy online
 price: €18.99 id: 15  Game: Runescape
 price: €19.99 id: 16  Game: Assetto Corsa
 price: €20.99 id: 17  Game: BeamNG.drive
-price: €54.99 id: 18  Game: F1® 2020
+price: €54.99 id: 18  Game: F1 2020
 price: €12.49 id: 19  Game: CarX Drift Racing Online
-price: €49.99 id: 20  Game: The Crew™ 2
+price: €49.99 id: 20  Game: The Crew 2
 price: €12.92 id: 21  Game: Dota 2
-price: €23.98 id: 22  Game: Civilization® V
+price: €23.98 id: 22  Game: Civilization V
 price: €19.99 id: 23  Game: Age of Empires II (2013)
 price: €08.19 id: 24  Game: Bloons TD 6
 price: €29.99 id: 25  Game: RimWorld
