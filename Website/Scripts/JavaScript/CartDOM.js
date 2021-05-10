@@ -1,6 +1,6 @@
 
 var customers = document.getElementById('customers');
-
+let totalValueOfEverything = 0;
 //Action games (C.McG.)
 //Item Name Variables
 var CSGO = localStorage.getItem("01Game");
@@ -22,6 +22,7 @@ var warframeprice = localStorage.getItem("05Price");
 		//Cart html
 		let name = CSGO;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/CSGO.webp"></td>' + '<td>' + name +'</td>' + '<td>' + CSGOprice + '</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValueCSGO" onkeyup="saveButtonCSGO()" onclick="saveButtonCSGO()" value="1" min="1"></div> </td>' + '<td><button class="remove-product" onclick="removeCSGO()">Remove</button></td>' + '<td id="totalPriceCSGO">' + CSGOprice + '</td></tr>';
+		updateTotalValue(CSGOprice, 1);
 	}
 	
 	function removeCSGO()
@@ -40,6 +41,7 @@ var warframeprice = localStorage.getItem("05Price");
 		let totalPriceCSGO = CSGOprice * x;
 		totalPriceCSGO = Math.round(totalPriceCSGO * 100) / 100;
 		totalPriceContentCSGO.textContent = totalPriceCSGO;
+		updateTotalValue(totalPriceCSGO, x);
 	}
 //End of CSGO
 
@@ -48,6 +50,7 @@ if(GTA5 == "Grand Theft Auto V")
 {
 	let name = GTA5;
 	customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/GTA.webp"></td>' + '<td>' + name +'</td>' + '<td>' + GTAprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonGTA()" onkeyup="saveButtonGTA()"type="number" id="quantityValueGTA" value="1" min="1"></div></td>' + '<td><button class="remove-product" onclick="removeGTA()">Remove</button></td>' + '<td id="totalPriceGTA">' + GTAprice + '</td></tr>';
+	updateTotalValue(GTAprice, 1);
 }
 
 function removeGTA()
@@ -64,6 +67,7 @@ function saveButtonGTA()
 	let totalPriceGTA = GTAprice * x;
 	totalPriceGTA = Math.round(totalPriceGTA * 100) / 100;
 	totalPriceContentGTA.textContent = totalPriceGTA;
+	updateTotalValue(totalPriceGTA, x);
 }
 //End of GTA5
 	
@@ -633,3 +637,10 @@ if(RimWorld == "RimWorld")
 			totalPriceContentRimWorld.textContent = totalPriceRimWorld;
 	}
 //End of RimWorld
+
+
+function updateTotalValue(inputValue, orignalValue)
+{
+	let calculation = inputValue - orignalValue;
+	totalValueOfEverything = totalValueOfEverything + calculation;
+}

@@ -54,3 +54,23 @@
 	margin-top: 7px;
   }
   
+#checkout
+{
+	margin-left: 1799px;
+    border-top-width: 2px;
+    padding-top: 1px;
+	border: 0;
+    padding: 4px 8px;
+    background-color: #12b007;
+    color: #fff;
+    font-family: $font-bold;
+    font-size: 20px;
+    border-radius: 3px;
+}
+
+#checkout-link
+{
+	text-decoration: none;
+	color: white;
+}
+  
