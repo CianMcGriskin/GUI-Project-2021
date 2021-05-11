@@ -639,8 +639,8 @@ if(RimWorld == "RimWorld")
 //End of RimWorld
 
 
-function updateTotalValue(inputValue, orignalValue)
+function updateTotalValue(inputValue, quantityValue)
 {
-	let calculation = inputValue - orignalValue;
+	let calculation = inputValue * quantityValue;
 	totalValueOfEverything = totalValueOfEverything + calculation;
 }
