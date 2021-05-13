@@ -798,7 +798,8 @@ function updateTotalValue() //(A.H-L)
 	totalValueOfEverything += parseFloat(tempValue);}
 	//END OF STRATEGY GAMES
 	
+	//
 	totalValueOfEverything = Math.round(totalValueOfEverything * 100) / 100;
 	document.getElementById("TotalPrice").textContent = "Total: €" + totalValueOfEverything;
-	
+	localStorage.setItem('totalValue', totalValueOfEverything);
 }
