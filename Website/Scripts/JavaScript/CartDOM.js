@@ -30,6 +30,8 @@ var warframeprice = localStorage.getItem("05Price");
 		//Remove CSGO from localStorage
 		localStorage.removeItem("01Game");
 		localStorage.removeItem("01Price");
+		document.getElementById("totalPriceCSGO").textContent = 0;
+		updateTotalValue();
 		location.reload();
 	}
 	
@@ -57,6 +59,8 @@ function removeGTA()
 {
 	localStorage.removeItem("02Game");
 	localStorage.removeItem("02Price");
+	document.getElementById("totalPriceGTA").textContent = 0;
+	updateTotalValue();
 	location.reload();
 }
 
@@ -83,6 +87,8 @@ function removeRS6()
 {
 	localStorage.removeItem("03Game");
 	localStorage.removeItem("03Price");
+	document.getElementById("totalPriceRS6").textContent = 0;
+	updateTotalValue();
 	location.reload();
 }
 
@@ -110,6 +116,8 @@ function removeL4D()
 {
 	localStorage.removeItem("04Game");
 	localStorage.removeItem("04Price");
+	document.getElementById("totalPriceL4D").textContent = 0;
+	updateTotalValue();
 	location.reload();
 }
 
@@ -136,6 +144,8 @@ function removeWarframe()
 {
 	localStorage.removeItem("05Game");
 	localStorage.removeItem("05Price");
+	document.getElementById("totalPricewarframe").textContent = 0;
+	updateTotalValue();
 	location.reload();
 }
 
@@ -175,6 +185,8 @@ function removeTerraria()
 	{
 			localStorage.removeItem("06Game");
 			localStorage.removeItem("06Price");
+			document.getElementById("totalPriceTerraria").textContent = 0;
+	updateTotalValue();
 			location.reload();
 	}
 function saveButtonTerraria()
@@ -199,6 +211,8 @@ if(witcher3 == "The Witcher 3: Wild Hunt")
 	{
 		localStorage.removeItem("07Game");
 		localStorage.removeItem("07Price");
+		document.getElementById("totalPriceWitcher3").textContent = 0;
+		updateTotalValue();
 		location.reload();
 	}
 	function saveButtonWitcher3()
@@ -223,6 +237,8 @@ if(TR == "Tomb Raider")
 	{
 		localStorage.removeItem("08Game");
 		localStorage.removeItem("08Price");
+		document.getElementById("totalPriceTR").textContent = 0;
+	updateTotalValue();
 		location.reload();
 	}
 	function saveButtonTR()
@@ -247,6 +263,8 @@ if(TheForest == "The Forest")
 	{
 		localStorage.removeItem("09Game");
 		localStorage.removeItem("09Price");
+		document.getElementById("totalPriceTheForest").textContent = 0;
+	updateTotalValue();
 		location.reload();
 	}
 	function saveButtonTheForest()
@@ -271,6 +289,8 @@ if(ARK == "ARK: Survival Evolved")
 	{
 		localStorage.removeItem("10Game");
 		localStorage.removeItem("10Price");
+		document.getElementById("totalPriceARK").textContent = 0;
+	updateTotalValue();
 		location.reload();
 	}
 	function saveButtonARK()
@@ -309,6 +329,8 @@ if(elderScrolls == "The Elder Scrolls Online")
 	{
 		localStorage.removeItem("11Game");
 		localStorage.removeItem("11Price");
+		document.getElementById("totalPriceelderScrolls").textContent = 0;
+		updateTotalValue();
 		location.reload();
 	}
 	function saveButtonelderScrolls()
@@ -333,6 +355,8 @@ if(VRChat == "VRChat")
 	{
 		localStorage.removeItem("12Game");
 		localStorage.removeItem("12Price");
+		document.getElementById("totalPriceVRChat").textContent = 0;
+		updateTotalValue();
 		location.reload();
 	}
 	function saveButtonVRChat()
@@ -357,6 +381,8 @@ if(Planetside2 == "Planetside 2")
 	{
 		localStorage.removeItem("13Game");
 		localStorage.removeItem("13Price");
+		document.getElementById("totalPricePlanetside2").textContent = 0;
+	updateTotalValue();
 		location.reload();
 	}
 	function saveButtonPlanetside2()
@@ -381,6 +407,8 @@ if(FinalFantasy == "Final Fantasy XIV")
 	{
 		localStorage.removeItem("14Game");
 		localStorage.removeItem("14Price");
+		document.getElementById("totalPriceFinalFantasy").textContent = 0;
+		updateTotalValue();
 		location.reload();
 	}
 	function saveButtonFinalFantasy()
@@ -405,6 +433,8 @@ if(Runescape == "Runescape")
 	{
 		localStorage.removeItem("15Game");
 		localStorage.removeItem("15Price");
+		document.getElementById("totalPriceRunescape").textContent = 0;
+	updateTotalValue();
 		location.reload();
 	}
 	function saveButtonRunescape()
@@ -442,6 +472,8 @@ if(AssettoCorsa == "Assetto Corsa")
 	{
 		localStorage.removeItem("16Game");
 		localStorage.removeItem("16Price");
+		document.getElementById("totalPriceAssettoCorsa").textContent = 0;
+	updateTotalValue();
 		location.reload();
 	}
 	function saveButtonAssettoCorsa() 
@@ -466,6 +498,8 @@ if(BeamNG == "BeamNG.drive")
 	{
 		localStorage.removeItem("17Game");
 		localStorage.removeItem("17Price");
+		document.getElementById("totalPriceBeamNG").textContent = 0;
+	updateTotalValue();
 		location.reload();
 	}
 	function saveButtonBeamNG() 
@@ -490,6 +524,8 @@ if(F1 == "F1 2020")
 	{
 		localStorage.removeItem("18Game");
 		localStorage.removeItem("18Price");
+		document.getElementById("totalPriceF1").textContent = 0;
+	updateTotalValue();
 		location.reload();
 	}
 	function saveButtonF1() 
@@ -514,6 +550,8 @@ if(CarXDrift == "CarX Drift Racing Online")
 	{
 		localStorage.removeItem("19Game");
 		localStorage.removeItem("19Price");
+		document.getElementById("totalPriceCarXDrift").textContent = 0;
+	updateTotalValue();
 		location.reload();
 	}
 	function saveButtonCarXDrift() 
@@ -538,6 +576,8 @@ if(TheCrew2 == "The Crew 2")
 	{
 		localStorage.removeItem("20Game");
 		localStorage.removeItem("20Price");
+		document.getElementById("totalPriceTheCrew2").textContent = 0;
+		updateTotalValue();
 		location.reload();
 	}
 	function saveButtonTheCrew2() 
@@ -575,6 +615,8 @@ if(Dota2 == "Dota 2")
 	{
 		localStorage.removeItem("21Game");
 		localStorage.removeItem("21Price");
+		document.getElementById("totalPriceDota2").textContent = 0;
+		updateTotalValue();
 		location.reload();
 	}
 	function saveButtonDota2() 
@@ -599,6 +641,8 @@ if(CivilizationV == "Civilization V")
 	{
 		localStorage.removeItem("22Game");
 		localStorage.removeItem("22Price");
+		document.getElementById("totalPriceCivilizationV").textContent = 0;
+	updateTotalValue();
 		location.reload();
 	}
 	function saveButtonCivilizationV() 
@@ -623,6 +667,8 @@ if(AgeOfEmpiresII == "Age of Empires II")
 	{
 		localStorage.removeItem("23Game");
 		localStorage.removeItem("23Price");
+		document.getElementById("totalPriceAgeOfEmpiresII").textContent = 0;
+	updateTotalValue();
 		location.reload();
 	}
 	function saveButtonAgeOfEmpiresII() 
@@ -647,6 +693,8 @@ if(BTD6 == "Bloons TD6")
 	{
 		localStorage.removeItem("24Game");
 		localStorage.removeItem("24Price");
+		document.getElementById("totalPriceBTD6").textContent = 0;
+		updateTotalValue();
 		location.reload();
 	}
 	function saveButtonBTD6() 
@@ -671,6 +719,8 @@ if(RimWorld == "RimWorld")
 	{
 		localStorage.removeItem("25Game");
 		localStorage.removeItem("25Price");
+		document.getElementById("totalPriceRimWorld").textContent = 0;
+		updateTotalValue();
 		location.reload();
 	}
 	function saveButtonRimWorld() 
@@ -802,4 +852,14 @@ function updateTotalValue() //(A.H-L)
 	totalValueOfEverything = Math.round(totalValueOfEverything * 100) / 100;
 	document.getElementById("TotalPrice").textContent = "Total: €" + totalValueOfEverything;
 	localStorage.setItem('totalValue', totalValueOfEverything);
+}
+function Checkout()
+{
+	if(totalValueOfEverything == 0)
+	{
+		alert("The cart is empty!!!");
+	}
+	else{
+		window.location.href = "Checkout.html";
+	}
 }
