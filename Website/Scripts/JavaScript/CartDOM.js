@@ -685,7 +685,7 @@ if(RimWorld == "RimWorld")
 //End of RimWorld
 
 
-function updateTotalValue()
+function updateTotalValue() //(A.H-L)
 {
 	totalValueOfEverything = 0;
 	//ACTION GAMES
