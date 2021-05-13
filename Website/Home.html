@@ -8,49 +8,44 @@
 		<!-- Header -->
 		<link rel="stylesheet"	type="text/css" href="Scripts/Header.css"/>
 		
-		
 		<!-- Slideshow -->
 		<link rel="stylesheet"	type="text/css" href="Slideshow_CSS.css"/>
-		
 		
 		<!-- Bootstrap CSS -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 		
-		<!-- -->
+		<!-- Genres CSS-->
 		<link rel="stylesheet"	type="text/css" href="GenreGames/Genres.css"/>
 		<style>
-		
-.carousel-control-next-icon:after
-{
-  content: '>';
-  font-size: 25px;
-  color: black;
-}
-
-.carousel-control-prev-icon:after {
-  content: '<';
-  font-size: 25px;
-  color: black;
-}
+			.carousel-control-next-icon:after
+			{
+			content: '>';
+			font-size: 25px;
+			color: black;
+			}
+	
+			.carousel-control-prev-icon:after {
+			content: '<';
+			font-size: 25px;
+			color: black;
+			}
 		</style>
 	</head>
-	<body>
-	
+<body>
 <!-- Start of Header Menu (C.McGr)-->
 <div class="navbar navbar-expand-lg navbar-light .bg-light" id="Header">
 	<img src="Images/Logo.png">
 	<div class="container-fluid">
-					<b><a class="text-dark navbar-brand" href="Home.html">Home</a></b>
-					
-					<!-- Something to do with short browser width and it turns the bar into a drop down. -->
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
+		<b><a class="text-dark navbar-brand" href="Home.html">Home</a></b>
+			<!-- Something to do with short browser width and it turns the bar into a drop down. -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-				<div class="collapse navbar-collapse" id="navbarNav">
+			<div class="collapse navbar-collapse" id="navbarNav">
 				<!-- Navigation bar -->
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+	
 					<!-- Drop Down -->
 					<div class="dropdown">
 						<button class="dropbtn" id="buttonDropDownMenu">Browse</button>
@@ -85,20 +80,21 @@
 						</li>
 						
 						<!-- DOM -->
-						<li class="navbar-item" id="logout">
-							
+						<li class="navbar-item" id="logout">	
 						</li>
-
-					</ul>
-					
+				</ul>
+				
 					<div id="welcomeMessage"></div>
 				</div>
 	</div>
 </div>
 <!-- End of Header Menu -->
-<div id="container">
-	<div id="carouselExampleControls" class="carousel slide mt-2" data-bs-ride="carousel">
+<!--Start of Slideshow (C.McGr, A.HL, J.T)-->
+<div id="container"> <!-- Container Div-->
+	<div id="carouselExampleControls" class="carousel slide mt-2" data-bs-ride="carousel"> <!-- Controls for slide-->
+		<!-- Wrapper for slides -->
 		<div class="carousel-inner">
+		<!--Slide One - MMO Games-->
 	<div class="carousel-item">
 		<div class="grid">
 			<div class="column">
@@ -139,6 +135,7 @@
 		</div>
 	</div>
 	
+	<!--Slide Two - Racing Games-->
 	<div class="carousel-item">
 		<div class="grid">
 			<div class="column"><img src="GenreGames/Racing/GameImages/AssettoCorsa.jpg" class="image" alt="Assetto Corsa">
