@@ -22,7 +22,7 @@ var warframeprice = localStorage.getItem("05Price");
 		//Cart html
 		let name = CSGO;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/CSGO.webp"></td>' + '<td>' + name +'</td>' + '<td>' + CSGOprice + '</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValueCSGO" onkeyup="saveButtonCSGO()" onclick="saveButtonCSGO()" value="1" min="1"></div> </td>' + '<td><button class="remove-product" onclick="removeCSGO()">Remove</button></td>' + '<td id="totalPriceCSGO">' + CSGOprice + '</td></tr>';
-		updateTotalValue(CSGOprice, 1);
+		updateTotalValue();
 	}
 	
 	function removeCSGO()
@@ -41,7 +41,7 @@ var warframeprice = localStorage.getItem("05Price");
 		let totalPriceCSGO = CSGOprice * x;
 		totalPriceCSGO = Math.round(totalPriceCSGO * 100) / 100;
 		totalPriceContentCSGO.textContent = totalPriceCSGO;
-		updateTotalValue(totalPriceCSGO, x);
+		updateTotalValue();
 	}
 //End of CSGO
 
@@ -50,7 +50,7 @@ if(GTA5 == "Grand Theft Auto V")
 {
 	let name = GTA5;
 	customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/GTA.webp"></td>' + '<td>' + name +'</td>' + '<td>' + GTAprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonGTA()" onkeyup="saveButtonGTA()"type="number" id="quantityValueGTA" value="1" min="1"></div></td>' + '<td><button class="remove-product" onclick="removeGTA()">Remove</button></td>' + '<td id="totalPriceGTA">' + GTAprice + '</td></tr>';
-	updateTotalValue(GTAprice, 1);
+	updateTotalValue();
 }
 
 function removeGTA()
@@ -67,7 +67,7 @@ function saveButtonGTA()
 	let totalPriceGTA = GTAprice * x;
 	totalPriceGTA = Math.round(totalPriceGTA * 100) / 100;
 	totalPriceContentGTA.textContent = totalPriceGTA;
-	updateTotalValue(totalPriceGTA, x);
+	updateTotalValue();
 }
 //End of GTA5
 	
@@ -76,6 +76,7 @@ if(RS6 == "Rainbow Six Siege")
 {
 	let name = RS6
 	customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/R6.webp"></td>' + '<td>' + name +'</td>' + '<td>' + RS6price + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonRS6()" onkeyup="saveButtonRS6()" type="number" id="quantityValueRS6" value="1" min="1"></div></td>' + '<td><button class="remove-product" onclick="removeRS6()">Remove</button></td>' + '<td id="totalPriceRS6">' + RS6price + '</td></tr>';
+	updateTotalValue();
 }
 
 function removeRS6()
@@ -92,6 +93,7 @@ function saveButtonRS6()
 	let totalPriceRS6 = RS6price * x;
 	totalPriceRS6 = Math.round(totalPriceRS6 * 100) / 100;
 	totalPriceContentRS6.textContent = totalPriceRS6;
+	updateTotalValue();
 }
 //End of RS6
 	
@@ -101,6 +103,7 @@ if(L4D == "Left For Dead Two")
 {
 	let name = L4D;
 	customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/L4D.jpg"></td>' + '<td>' + name +'</td>' + '<td>' + L4Dprice + '</td>' + '<td><div id="product-quantity"><input  onclick="saveButtonL4D()" onkeyup="saveButtonL4D()"type="number" id="quantityValueL4D" value="1" min="1"></div></td>' + '<td><button class="remove-product" onclick="removeL4D()">Remove</button></td>' + '<td id="totalPriceL4D">' + L4Dprice + '</td></tr>';
+	updateTotalValue();
 }
 
 function removeL4D()
@@ -117,6 +120,7 @@ function saveButtonL4D()
 	let totalPriceL4D = L4Dprice * x;
 	totalPriceL4D = Math.round(totalPriceL4D * 100) / 100;
 	totalPriceContentL4D.textContent = totalPriceL4D;
+	updateTotalValue();
 }
 //End of L4D
 	
@@ -125,6 +129,7 @@ if(warframe == "Warframe")
 {
 	let name = warframe;
 	customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/warframe.png"></td>' + '<td>' + name +'</td>' + '<td>' + warframeprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonWarframe()" onkeyup="saveButtonWarframe()" type="number" id="quantityValuewarframe" value="1" min="1"></div></td>' + '<td><button class="remove-product" onclick="removeWarframe()">Remove</button></td>' + '<td id="totalPricewarframe">' + warframeprice + '</td></tr>';
+	updateTotalValue();
 }
 
 function removeWarframe()
@@ -141,6 +146,7 @@ function saveButtonWarframe()
 	let totalPricewarframe = warframeprice * x;
 	totalPricewarframe = Math.round(totalPricewarframe * 100) / 100;
 	totalPriceContentwarframe.textContent = totalPricewarframe;
+	updateTotalValue();
 }
 //End of Warframe
 //End of Action
@@ -163,6 +169,7 @@ if(terraria == "Terraria")
 	{
 	let name = terraria;
 	customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Adventure/GameImages/Terraria.webp"></td>' + '<td>' + name +'</td>' + '<td>' + terrariaprice +'</td>' + '<td><div id="product-quantity"><input id="quantityValueTerraria" onkeyup="saveButtonTerraria()" onclick="saveButtonTerraria()" type="number" id="quantityValue" value="1" min="1"></div></td>' + '<td><button class="remove-product" onclick="removeTerraria()">Remove</button></td>' + '<td id="totalPriceTerraria">' + terrariaprice + '</td></tr>';
+	updateTotalValue();
 	}
 function removeTerraria()
 	{
@@ -177,6 +184,7 @@ function saveButtonTerraria()
 			let totalPriceTerraria = terrariaprice * x;
 			totalPriceTerraria = Math.round(totalPriceterraria * 100) / 100;
 			totalPriceContentTerraria.textContent = totalPriceTerraria;
+			updateTotalValue();
 	}
 //End of Terraria
 
@@ -185,6 +193,7 @@ if(witcher3 == "The Witcher 3: Wild Hunt")
 	{
 		let name = witcher3;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Adventure/GameImages/Witcher3.webp"></td>' + '<td>' + name +'</td>' + '<td>' + witcher3price + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonWitcher3()" onkeyup="saveButtonWitcher3()" type="number" id="quantityValueWitcher3" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeWitcher3()">Remove</button></td>' + '<td id="totalPriceWitcher3"> ' + witcher3price + '</tr>';
+		updateTotalValue();
 	}
 	function removeWitcher3()
 	{
@@ -199,6 +208,7 @@ if(witcher3 == "The Witcher 3: Wild Hunt")
 			let totalPriceWitcher3 = witcher3price * x;
 			totalPricewitcher3 = Math.round(totalPricewitcher3 * 100) / 100;
 			totalPriceContentWitcher3.textContent = totalPriceWitcher3;
+			updateTotalValue();
 	}
 //End of Witcher 3
 
@@ -207,6 +217,7 @@ if(TR == "Tomb Raider")
 	{
 		let name = TR;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Adventure/GameImages/TombRaider.webp"></td>' + '<td>' + name +'</td>' + '<td>' + TRprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonTR()" onkeyup="saveButtonTR()" type="number" id="quantityValueTR" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeTR()">Remove</button></td>' + '<td id="totalPriceTR"> ' + TRprice + '</tr>';
+		updateTotalValue();
 	}
 	function removeTR()
 	{
@@ -221,6 +232,7 @@ if(TR == "Tomb Raider")
 			let totalPriceTR = TRprice * x;
 			totalPriceTR = Math.round(totalPriceTR * 100) / 100;
 			totalPriceContentTR.textContent = totalPriceTR;
+			updateTotalValue();
 	}
 //End of Tomb Raider
 
@@ -229,6 +241,7 @@ if(TheForest == "The Forest")
 	{
 		let name = TheForest;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Adventure/GameImages/TheForest.webp"></td>' + '<td>' + name +'</td>' + '<td>' + TheForestprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonTheForest()" onkeyup="saveButtonTheForest()" type="number" id="quantityValueTheForest" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeTheForest()">Remove</button></td>' + '<td id="totalPriceTheForest"> ' + TheForestprice + '</tr>';
+		updateTotalValue();
 	}
 	function removeTheForest()
 	{
@@ -243,6 +256,7 @@ if(TheForest == "The Forest")
 			let totalPriceTheForest = TheForestprice * x;
 			totalPriceTheForest = Math.round(totalPriceTheForest * 100) / 100;
 			totalPriceContentTheForest.textContent = totalPriceTheForest;
+			updateTotalValue();
 	}
 //End fo The Forest
 
@@ -251,6 +265,7 @@ if(ARK == "ARK: Survival Evolved")
 	{
 		let name = ARK;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Adventure/GameImages/ARK.webp"></td>' + '<td>' + name +'</td>' + '<td>' + ARKprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonARK()" onkeyup="saveButtonARK()" type="number" id="quantityValueARK" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeARK()">Remove</button></td>' + '<td id="totalPriceARK"> ' + ARKprice + '</tr>';
+		updateTotalValue();
 	}
 	function removeARK()
 	{
@@ -265,6 +280,7 @@ if(ARK == "ARK: Survival Evolved")
 			let totalPriceARK = ARKprice * x;
 			totalPriceARK = Math.round(totalPriceARK * 100) / 100;
 			totalPriceContentARK.textContent = totalPriceARK;
+			updateTotalValue();
 	}
 //End of Ark
 
@@ -287,6 +303,7 @@ if(elderScrolls == "The Elder Scrolls Online")
 	{
 		let name = elderScrolls;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/MMO/GameImages/ElderScrolls.webp"></td>' + '<td>' + name +'</td>' + '<td>' + elderScrollsprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonelderScrolls()" onkeyup="saveButtonelderScrolls()" type="number" id="quantityValueelderScrolls" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeelderScrolls()">Remove</button></td>' + '<td id="totalPriceelderScrolls"> ' + elderScrollsprice + '</tr>';
+		updateTotalValue();
 	}
 	function removeelderScrolls()
 	{
@@ -301,6 +318,7 @@ if(elderScrolls == "The Elder Scrolls Online")
 			let totalPriceelderScrolls = elderScrollsprice * x;
 			totalPriceelderScrolls = Math.round(totalPriceelderScrolls * 100) / 100;
 			totalPriceContentelderScrolls.textContent = totalPriceelderScrolls;
+			updateTotalValue();
 	}
 //End of Elder Scrolls
 
@@ -309,6 +327,7 @@ if(VRChat == "VRChat")
 	{
 		let name = VRChat;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/MMO/GameImages/VRChat.jpg"></td>' + '<td>' + name +'</td>' + '<td>' + VRChatprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonVRChat()" onkeyup="saveButtonVRChat()" type="number" id="quantityValueVRChat" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeVRChat()">Remove</button></td>' + '<td id="totalPriceVRChat"> ' + VRChatprice + '</tr>';
+		updateTotalValue();
 	}
 	function removeVRChat()
 	{
@@ -323,6 +342,7 @@ if(VRChat == "VRChat")
 			let totalPriceVRChat = VRChatprice * x;
 			totalPriceVRChat = Math.round(totalPriceVRChat * 100) / 100;
 			totalPriceContentVRChat.textContent = totalPriceVRChat;
+			updateTotalValue();
 	}
 //End of VR Chat
 
@@ -331,6 +351,7 @@ if(Planetside2 == "Planetside 2")
 	{
 		let name = Planetside2;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/MMO/GameImages/PlanetSide2.png"></td>' + '<td>' + name +'</td>' + '<td>' + Planetside2price + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonPlanetside2()" onkeyup="saveButtonPlanetside2()" type="number" id="quantityValuePlanetside2" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removePlanetside2()">Remove</button></td>' + '<td id="totalPricePlanetside2"> ' + Planetside2price + '</tr>';
+		updateTotalValue();
 	}
 	function removePlanetside2()
 	{
@@ -345,6 +366,7 @@ if(Planetside2 == "Planetside 2")
 			let totalPricePlanetside2 = Planetside2price * x;
 			totalPricePlanetside2 = Math.round(totalPricePlanetside2 * 100) / 100;
 			totalPriceContentPlanetside2.textContent = totalPricePlanetside2;
+			updateTotalValue();
 	}
 //End of Planetside 2
 
@@ -353,6 +375,7 @@ if(FinalFantasy == "Final Fantasy XIV")
 	{
 		let name = FinalFantasy;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/MMO/GameImages/FinalFantasyOnline.webp"></td>' + '<td>' + name +'</td>' + '<td>' + FinalFantasyprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonFinalFantasy()" onkeyup="saveButtonFinalFantasy()" type="number" id="quantityValueFinalFantasy" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeFinalFantasy()">Remove</button></td>' + '<td id="totalPriceFinalFantasy"> ' + FinalFantasyprice + '</tr>';
+		updateTotalValue();
 	}
 	function removeFinalFantasy()
 	{
@@ -367,6 +390,7 @@ if(FinalFantasy == "Final Fantasy XIV")
 			let totalPriceFinalFantasy = FinalFantasyprice * x;
 			totalPriceFinalFantasy = Math.round(totalPriceFinalFantasy * 100) / 100;
 			totalPriceContentFinalFantasy.textContent = totalPriceFinalFantasy;
+			updateTotalValue();
 	}
 //End of FinalFantasy
 
@@ -375,6 +399,7 @@ if(Runescape == "Runescape")
 	{
 		let name = Runescape;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/MMO/GameImages/Runescape.webp"></td>' + '<td>' + name +'</td>' + '<td>' + Runescapeprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonRunescape()" onkeyup="saveButtonRunescape()" type="number" id="quantityValueRunescape" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeRunescape()">Remove</button></td>' + '<td id="totalPriceRunescape"> ' + Runescapeprice + '</tr>';
+		updateTotalValue();
 	}
 	function removeRunescape()
 	{
@@ -389,6 +414,7 @@ if(Runescape == "Runescape")
 			let totalPriceRunescape = Runescapeprice * x;
 			totalPriceRunescape = Math.round(totalPriceRunescape * 100) / 100;
 			totalPriceContentRunescape.textContent = totalPriceRunescape;
+			updateTotalValue();
 	}
 //End of Runescape
 
@@ -410,6 +436,7 @@ if(AssettoCorsa == "Assetto Corsa")
 	{
 		let name = AssettoCorsa;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Racing/GameImages/AssettoCorsa.jpg"></td>' + '<td>' + name +'</td>' + '<td>' + AssettoCorsaprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonAssettoCorsa()" onkeyup="saveButtonAssettoCorsa()" type="number" id="quantityValueAssettoCorsa" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeAssettoCorsa()">Remove</button></td>' + '<td id="totalPriceAssettoCorsa"> ' + AssettoCorsaprice + '</tr>';
+		updateTotalValue();
 	}
 	function removeAssettoCorsa()
 	{
@@ -424,6 +451,7 @@ if(AssettoCorsa == "Assetto Corsa")
 			let totalPriceAssettoCorsa = AssettoCorsaprice * x;
 			totalPriceAssettoCorsa = Math.round(totalPriceAssettoCorsa * 100) / 100;
 			totalPriceContentAssettoCorsa.textContent = totalPriceAssettoCorsa;
+			updateTotalValue();
 	}
 //End of AssettoCorsa
 
@@ -432,6 +460,7 @@ if(BeamNG == "BeamNG.drive")
 	{
 		let name = BeamNG;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Racing/GameImages/BeamNG.webp"></td>' + '<td>' + name +'</td>' + '<td>' + BeamNGprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonBeamNG()" onkeyup="saveButtonBeamNG()" type="number" id="quantityValueBeamNG" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeBeamNG()">Remove</button></td>' + '<td id="totalPriceBeamNG"> ' + BeamNGprice + '</tr>';
+		updateTotalValue();
 	}
 	function removeBeamNG()
 	{
@@ -446,6 +475,7 @@ if(BeamNG == "BeamNG.drive")
 			let totalPriceBeamNG = BeamNGprice * x;
 			totalPriceBeamNG = Math.round(totalPriceBeamNG * 100) / 100;
 			totalPriceContentBeamNG.textContent = totalPriceBeamNG;
+			updateTotalValue();
 	}
 //End of BeamNG.Drive
 
@@ -454,6 +484,7 @@ if(F1 == "F1 2020")
 	{
 		let name = F1;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Racing/GameImages/F1.jpg"></td>' + '<td>' + name +'</td>' + '<td>' + F1price + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonF1()" onkeyup="saveButtonF1()" type="number" id="quantityValueF1" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeF1()">Remove</button></td>' + '<td id="totalPriceF1"> ' + F1price + '</tr>';
+		updateTotalValue();
 	}
 	function removeF1()
 	{
@@ -468,6 +499,7 @@ if(F1 == "F1 2020")
 			let totalPriceF1 = F1price * x;
 			totalPriceF1 = Math.round(totalPriceF1 * 100) / 100;
 			totalPriceContentF1.textContent = totalPriceF1;
+			updateTotalValue();
 	}
 //End of F1
 
@@ -476,6 +508,7 @@ if(CarXDrift == "CarX Drift Racing Online")
 	{
 		let name = CarXDrift;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Racing/GameImages/CarX.webp"></td>' + '<td>' + name +'</td>' + '<td>' + CarXDriftprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonCarXDrift()" onkeyup="saveButtonCarXDrift()" type="number" id="quantityValueCarXDrift" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeCarXDrift()">Remove</button></td>' + '<td id="totalPriceCarXDrift"> ' + CarXDriftprice + '</tr>';
+		updateTotalValue();
 	}
 	function removeCarXDrift()
 	{
@@ -490,6 +523,7 @@ if(CarXDrift == "CarX Drift Racing Online")
 			let totalPriceCarXDrift = CarXDriftprice * x;
 			totalPriceCarXDrift = Math.round(totalPriceCarXDrift * 100) / 100;
 			totalPriceContentCarXDrift.textContent = totalPriceCarXDrift;
+			updateTotalValue();
 	}
 	//End of CarXDrift
 	
@@ -498,6 +532,7 @@ if(TheCrew2 == "The Crew 2")
 	{
 		let name = TheCrew2;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Racing/GameImages/TheCrew2.webp"></td>' + '<td>' + name +'</td>' + '<td>' + TheCrew2price + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonTheCrew2()" onkeyup="saveButtonTheCrew2()" type="number" id="quantityValueTheCrew2" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeTheCrew2()">Remove</button></td>' + '<td id="totalPriceTheCrew2"> ' + TheCrew2price + '</tr>';
+		updateTotalValue();
 	}
 	function removeTheCrew2()
 	{
@@ -512,6 +547,7 @@ if(TheCrew2 == "The Crew 2")
 			let totalPriceTheCrew2 = TheCrew2price * x;
 			totalPriceTheCrew2 = Math.round(totalPriceTheCrew2 * 100) / 100;
 			totalPriceContentTheCrew2.textContent = totalPriceTheCrew2;
+			updateTotalValue();
 	}
 //End of TheCrew2
 
@@ -533,6 +569,7 @@ if(Dota2 == "Dota 2")
 	{
 		let name = Dota2;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Strategy/GameImages/Dota2.jpg"></td>' + '<td>' + name +'</td>' + '<td>' + Dota2price + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonDota2()" onkeyup="saveButtonDota2()" type="number" id="quantityValueDota2" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeDota2()">Remove</button></td>' + '<td id="totalPriceDota2"> ' + Dota2price + '</tr>';
+		updateTotalValue();
 	}
 	function removeDota2()
 	{
@@ -547,6 +584,7 @@ if(Dota2 == "Dota 2")
 			let totalPriceDota2 = Dota2price * x;
 			totalPriceDota2 = Math.round(totalPriceDota2 * 100) / 100;
 			totalPriceContentDota2.textContent = totalPriceDota2;
+			updateTotalValue();
 	}
 //End of Dota2
 
@@ -555,6 +593,7 @@ if(CivilizationV == "Civilization V")
 	{
 		let name = CivilizationV;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Strategy/GameImages/Civilization.webp"></td>' + '<td>' + name +'</td>' + '<td>' + CivilizationVprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonCivilizationV()" onkeyup="saveButtonCivilizationV()" type="number" id="quantityValueCivilizationV" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeCivilizationV()">Remove</button></td>' + '<td id="totalPriceCivilizationV"> ' + CivilizationVprice + '</tr>';
+		updateTotalValue();
 	}
 	function removeCivilizationV()
 	{
@@ -569,6 +608,7 @@ if(CivilizationV == "Civilization V")
 			let totalPriceCivilizationV = CivilizationVprice * x;
 			totalPriceCivilizationV = Math.round(totalPriceCivilizationV * 100) / 100;
 			totalPriceContentCivilizationV.textContent = totalPriceCivilizationV;
+			updateTotalValue();
 	}
 //End of CivilizationV
 
@@ -577,6 +617,7 @@ if(AgeOfEmpiresII == "Age of Empires II")
 	{
 		let name = AgeOfEmpiresII;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Strategy/GameImages/AgeOfEmpires.webp"></td>' + '<td>' + name +'</td>' + '<td>' + AgeOfEmpiresIIprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonAgeOfEmpiresII()" onkeyup="saveButtonAgeOfEmpiresII()" type="number" id="quantityValueAgeOfEmpiresII" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeAgeOfEmpiresII()">Remove</button></td>' + '<td id="totalPriceAgeOfEmpiresII"> ' + AgeOfEmpiresIIprice + '</tr>';
+		updateTotalValue();
 	}
 	function removeAgeOfEmpiresII()
 	{
@@ -591,6 +632,7 @@ if(AgeOfEmpiresII == "Age of Empires II")
 			let totalPriceAgeOfEmpiresII = AgeOfEmpiresIIprice * x;
 			totalPriceAgeOfEmpiresII = Math.round(totalPriceAgeOfEmpiresII * 100) / 100;
 			totalPriceContentAgeOfEmpiresII.textContent = totalPriceAgeOfEmpiresII;
+			updateTotalValue();
 	}
 //End of AgeOfEmpiresII
 
@@ -599,6 +641,7 @@ if(BTD6 == "Bloons TD6")
 	{
 		let name = BTD6;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Strategy/GameImages/BloonsTD6.webp"></td>' + '<td>' + name +'</td>' + '<td>' + BTD6price + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonBTD6()" onkeyup="saveButtonBTD6()" type="number" id="quantityValueBTD6" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeBTD6()">Remove</button></td>' + '<td id="totalPriceBTD6"> ' + BTD6price + '</tr>';
+		updateTotalValue();
 	}
 	function removeBTD6()
 	{
@@ -613,6 +656,7 @@ if(BTD6 == "Bloons TD6")
 			let totalPriceBTD6 = BTD6price * x;
 			totalPriceBTD6 = Math.round(totalPriceBTD6 * 100) / 100;
 			totalPriceContentBTD6.textContent = totalPriceBTD6;
+			updateTotalValue();
 	}
 //End of BTD6
 
@@ -621,6 +665,7 @@ if(RimWorld == "RimWorld")
 	{
 		let name = RimWorld;
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Strategy/GameImages/RimWorld.webp"></td>' + '<td>' + name +'</td>' + '<td>' + RimWorldprice + '</td>' + '<td><div id="product-quantity"><input onclick="saveButtonRimWorld()" onkeyup="saveButtonRimWorld()" type="number" id="quantityValueRimWorld" value="1" min="1"></div></td>' +'<td><button class="remove-product" onclick="removeRimWorld()">Remove</button></td>' + '<td id="totalPriceRimWorld"> ' + RimWorldprice + '</tr>';
+		updateTotalValue();
 	}
 	function removeRimWorld()
 	{
@@ -635,12 +680,125 @@ if(RimWorld == "RimWorld")
 			let totalPriceRimWorld = RimWorldprice * x;
 			totalPriceRimWorld = Math.round(totalPriceRimWorld * 100) / 100;
 			totalPriceContentRimWorld.textContent = totalPriceRimWorld;
+			updateTotalValue();
 	}
 //End of RimWorld
 
 
-function updateTotalValue(inputValue, quantityValue)
+function updateTotalValue() //(A.H-L)
 {
-	let calculation = inputValue * quantityValue;
-	totalValueOfEverything = totalValueOfEverything + calculation;
+	totalValueOfEverything = 0;
+	//ACTION GAMES
+	if(typeof totalPriceCSGO != "undefined"){
+	let tempValue = document.getElementById("totalPriceCSGO").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	
+	if(typeof totalPriceGTA != "undefined"){
+	let tempValue = document.getElementById("totalPriceGTA").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	
+	if(typeof totalPriceRS6 != "undefined"){
+	let tempValue = document.getElementById("totalPriceRS6").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	
+	if(typeof totalPriceL4D	!= "undefined"){
+	let tempValue = document.getElementById("totalPriceL4D").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	
+	if(typeof totalPricewarframe != "undefined"){
+	let tempValue = document.getElementById("totalPricewarframe").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	//END OF ACTION GAMES
+	
+	//ADVENTURE GAMES
+	if(typeof totalPriceTerraria != "undefined"){
+	let tempValue = document.getElementById("totalPriceTerraria").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	
+	if(typeof totalPriceWitcher3 != "undefined"){
+	let tempValue = document.getElementById("totalPriceWitcher3").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	
+	if(typeof totalPriceTR != "undefined"){
+	let tempValue = document.getElementById("totalPriceTR").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	
+	if(typeof totalPriceTheForest	!= "undefined"){
+	let tempValue = document.getElementById("totalPriceTheForest").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	
+	if(typeof totalPriceARK != "undefined"){
+	let tempValue = document.getElementById("totalPriceARK").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	//END OF ADVENTURE GAMES 
+	
+	//MMO GAMES
+	if(typeof totalPriceelderScrolls != "undefined"){
+	let tempValue = document.getElementById("totalPriceelderScrolls").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	
+	if(typeof totalPriceVRChat != "undefined"){
+	let tempValue = document.getElementById("totalPriceVRChat").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	
+	if(typeof totalPricePlanetside2 != "undefined"){
+	let tempValue = document.getElementById("totalPricePlanetside2").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	
+	if(typeof totalPriceFinalFantasy != "undefined"){
+	let tempValue = document.getElementById("totalPriceFinalFantasy").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	
+	if(typeof totalPriceRunescape != "undefined"){
+	let tempValue = document.getElementById("totalPriceRunescape").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	//END OF MMO GAMES 
+	
+	//RACING GAMES
+	if(typeof totalPriceAssettoCorsa != "undefined"){
+	let tempValue = document.getElementById("totalPriceAssettoCorsa").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	
+	if(typeof totalPriceBeamNG != "undefined"){
+	let tempValue = document.getElementById("totalPriceBeamNG").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	
+	if(typeof totalPriceF1 != "undefined"){
+	let tempValue = document.getElementById("totalPriceF1").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	
+	if(typeof totalPriceCarXDrift	!= "undefined"){
+	let tempValue = document.getElementById("totalPriceCarXDrift").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	
+	if(typeof totalPriceTheCrew2 != "undefined"){
+	let tempValue = document.getElementById("totalPriceTheCrew2").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	//END OF RACING GAMES 
+	
+	//STRATEGY GAMES
+	if(typeof totalPriceDota2 != "undefined"){
+	let tempValue = document.getElementById("totalPriceDota2").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	
+	if(typeof totalPriceCivilizationV != "undefined"){
+	let tempValue = document.getElementById("totalPriceCivilizationV").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	
+	if(typeof totalPriceAgeOfEmpiresII != "undefined"){
+	let tempValue = document.getElementById("totalPriceAgeOfEmpiresII").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	
+	if(typeof totalPriceBTD6 != "undefined"){
+	let tempValue = document.getElementById("totalPriceBTD6").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	
+	if(typeof totalPriceRimWorld != "undefined"){
+	let tempValue = document.getElementById("totalPriceRimWorld").textContent;
+	totalValueOfEverything += parseFloat(tempValue);}
+	//END OF STRATEGY GAMES
+	
+	totalValueOfEverything = Math.round(totalValueOfEverything * 100) / 100;
+	document.getElementById("TotalPrice").textContent = "Total: €" + totalValueOfEverything;
+	
 }
