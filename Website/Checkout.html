@@ -104,13 +104,7 @@
 
           <div class="col-50">
             <h3>Payment</h3>
-            <label for="fname">Accepted Cards</label>
-            <div class="icon-container">
-              <i class="fa fa-cc-visa" style="color:navy;"></i>
-              <i class="fa fa-cc-amex" style="color:blue;"></i>
-              <i class="fa fa-cc-mastercard" style="color:red;"></i>
-              <i class="fa fa-cc-discover" style="color:orange;"></i>
-            </div>
+            <img src="images/e.jpg" style="height: 106px;">
             <label for="cname">Name on Card</label>
             <input type="text" id="cname" name="cardname" placeholder="John More Doe" required>
             <label for="ccnum">Credit card number</label>
@@ -141,7 +135,7 @@
       <hr>
 	  <h3 id="totalPrice">Total : €0.00</h3>
 	  <input type="text" id="discountCode" placeholder="Discount Code">
-	  <button class="btn btn-primary" onclick="codevalid()">Apply Discount Code</button>
+	  <button class="btn btn-primary" onclick="checkCoupon()">Apply Discount Code</button>
     </div>
   </div>
 </div>
@@ -152,14 +146,43 @@
 		let totalPriceDOM = document.getElementById("totalPrice");
 		totalPriceDOM.innerHTML = "Total :  €" + totalValue;
 		
-		var couponCodes = ["GMIT2020","CIAN","ADRIAN"];
-		let couponInput = document.getElementById("discountCode").content;
-		for(var i = 0; i < colors.length; i++)
+		var couponCodes = ["gmit2020", "cian", "adrian"];
+		let isCouponApplied = 0;
+		sessionStorage.setItem('CouponApplied', 'yy');
+		function checkCoupon()
+	{
+		let couponInput = document.getElementById("discountCode").value;
+		let inputLowerCase = couponInput.toLowerCase();
+		let couponValue = sessionStorage.getItem('CouponApplied');
+		
+		if (couponValue != 'xx')
 		{
-			if (couponInput.equals(couponCodes[i]))
+		for(var i = 0; i < couponCodes.length; i++)
 			{
-				
+			
+				if (inputLowerCase == couponCodes[i])
+				{
+					isCouponApplied = 1;
+				}
 			}
+				if (isCouponApplied == 0)
+				{
+					alert("Not a valid Coupon Code!");
+				}
+				
+				if (isCouponApplied == 1)
+				{
+					alert("Coupon has been applied!");
+					totalValue = (totalValue*0.90);
+					totalPriceDOM.innerHTML = "Total After Discount :  €" + Math.round(totalValue* 100)/ 100;
+					sessionStorage.setItem('CouponApplied', 'xx');
+				}
 		}
+
+		if(couponValue == 'xx')
+		{
+			alert("Coupon already applied!")
+		}
+	}
 	</script>
 </html>
