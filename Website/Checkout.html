@@ -144,19 +144,20 @@
 <!-- Start of Java Script section -->
 </body>
 	<script>
+		//Formatting the total value
 		let totalValue = localStorage.getItem('totalValue');
 		let totalPriceDOM = document.getElementById("totalPrice");
 		totalPriceDOM.innerHTML = "Total :  €" + totalValue;
-		
+		//Adds coupon codes
 		var couponCodes = ["gmit2020", "cian", "adrian", "jack"];
 		let isCouponApplied = 0;
 		sessionStorage.setItem('CouponApplied', 'yy');
 		function checkCoupon()
-	{
+	{	//Adds functionality to the coupon codes
 		let couponInput = document.getElementById("discountCode").value;
 		let inputLowerCase = couponInput.toLowerCase();
 		let couponValue = sessionStorage.getItem('CouponApplied');
-		
+		//Validates the coupon codes and, if they are valid, aplies them to the total
 		if (couponValue != 'xx')
 		{
 		for(var i = 0; i < couponCodes.length; i++)
@@ -180,7 +181,7 @@
 					sessionStorage.setItem('CouponApplied', 'xx');
 				}
 		}
-
+		//checks if inputted coupon has already been applied
 		if(couponValue == 'xx')
 		{
 			alert("Coupon already applied!")
