@@ -14,20 +14,24 @@ var L4D = localStorage.getItem("04Game"); //Gets local storage value of item nam
 var warframe = localStorage.getItem("05Game"); //Gets local storage value of item name and sets it to variable
 
 //Item Price Variables
-var CSGOprice = localStorage.getItem("01Price"); 
-var GTAprice = localStorage.getItem("02Price");
-var RS6price = localStorage.getItem("03Price");
-var L4Dprice = localStorage.getItem("04Price");
-var warframeprice = localStorage.getItem("05Price");	
+var CSGOprice = localStorage.getItem("01Price"); //Gets local storage value of item price and sets it to variable
+var GTAprice = localStorage.getItem("02Price"); //Gets local storage value of item price and sets it to variable
+var RS6price = localStorage.getItem("03Price"); //Gets local storage value of item price and sets it to variable
+var L4Dprice = localStorage.getItem("04Price"); //Gets local storage value of item price and sets it to variable
+var warframeprice = localStorage.getItem("05Price"); //Gets local storage value of item price and sets it to variable
+
 //CSGO
 	if(CSGO == "Counter-Strike Global Offensive")
 	{
 		//Cart html
-		let name = CSGO;
+		let name = CSGO; // Name = name of product
+		// DOM of customers ID
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/CSGO.webp"></td>' + '<td>' + name +'</td>' + '<td>' + CSGOprice + '</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValueCSGO" onkeyup="saveButtonCSGO()" onclick="saveButtonCSGO()" value="1" min="1"></div> </td>' + '<td><button class="remove-product" onclick="removeCSGO()">Remove</button></td>' + '<td id="totalPriceCSGO">' + CSGOprice + '</td></tr>';
+		// calles function updateTotalValue()
 		updateTotalValue();
 	}
 	
+	//Function to remove CSGO
 	function removeCSGO()
 	{
 		//Remove CSGO from localStorage
