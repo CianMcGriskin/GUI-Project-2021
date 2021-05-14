@@ -73,11 +73,12 @@
 	</div>
 </div>
 <!-- End of Header Menu -->
+<!-- start of Billing Address section -->
 <div class="row">
   <div class="col-75">
     <div class="container">
       <form action="Confirmed.html">
-      
+      <!-- this is the collum which asks the user to input their fullname, address, Email and City -->
         <div class="row">
           <div class="col-50">
             <h3>Billing Address</h3>
@@ -89,7 +90,7 @@
             <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" required>
             <label for="city"><i class="fa fa-institution"></i> City</label>
             <input type="text" id="city" name="city" placeholder="Dublin" required>
-
+		<!-- this is the row which asks the user to input their county, Zip code, Exp Year, CVV -->
             <div class="row">
               <div class="col-50">
                 <label for="state">County</label>
@@ -101,7 +102,7 @@
               </div>
             </div>
           </div>
-
+		<!-- this is the collum which asks the user to input the name on the card, the number, the month and year it expires, and the CVV -->
           <div class="col-50">
             <h3>Payment</h3>
             <img src="images/e.jpg" style="height: 104px;">
@@ -139,14 +140,15 @@
     </div>
   </div>
 </div>
-
+<!-- End of Billing Address section -->
+<!-- Start of Java Script section -->
 </body>
 	<script>
 		let totalValue = localStorage.getItem('totalValue');
 		let totalPriceDOM = document.getElementById("totalPrice");
 		totalPriceDOM.innerHTML = "Total :  €" + totalValue;
 		
-		var couponCodes = ["gmit2020", "cian", "adrian"];
+		var couponCodes = ["gmit2020", "cian", "adrian", "jack"];
 		let isCouponApplied = 0;
 		sessionStorage.setItem('CouponApplied', 'yy');
 		function checkCoupon()
@@ -185,4 +187,5 @@
 		}
 	}
 	</script>
+	<!-- end of Java Script section -->
 </html>
