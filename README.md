@@ -1,5 +1,18 @@
 # GUI-Project-2021
+Github link: https://github.com/CianMcGriskin/GUI-Project-2021
 
---Known Issue--
-Header – Needs a shopping basket.
-The small width browser function drop down thing with bootstrap- not working at all and fucks the site, not sure if its necessary.
+Login Credentials: 
+Username: gamer312
+Password: easygames
+
+Username: weirdturtle
+Password: thebigbox
+
+Username: username
+Password: password
+
+Coupon Codes:
+cian
+adrian
+jack
+gmit2020
