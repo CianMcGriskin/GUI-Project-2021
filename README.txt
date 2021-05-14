@@ -16,5 +16,6 @@ cian, adrian, jack, gmit2020
 
 bugs:
 - â‚¬ appears instead of euro sign and disappears after refreshing
-- checkout button doesn't appear on resolutions that aren't 1920 x 1080
 - minimising / resizing website messes it up
+
+Designed on a 1920x1080 resoloution.
