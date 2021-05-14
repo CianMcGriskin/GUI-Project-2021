@@ -74,69 +74,69 @@
 </div>
 <!-- End of Header Menu -->
 <!-- start of Billing Address section -->
-<div class="row">
-  <div class="col-75">
-    <div class="container">
-      <form action="Confirmed.html">
-      <!-- this is the collum which asks the user to input their fullname, address, Email and City -->
-        <div class="row">
-          <div class="col-50">
+<div class="row"> <!-- Div class row container -->
+  <div class="col-75"> <!-- Div class col-75 container-->
+    <div class="container"><!-- Div class container-->
+      <form action="Confirmed.html"> <!-- Redirect to confirmed.html after submitting -->
+      <!-- this is the column which asks the user to input their fullname, address, Email and City -->
+        <div class="row"> <!-- Div class row container -->
+          <div class="col-50"> <!-- Div class col-50 container-->
             <h3>Billing Address</h3>
-            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="John M. Doe" required>
-            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label> <!-- label for full name-->
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe" required> <!-- input type is text - placeholder is gray text and required means it must be entered-->
+            <label for="email"><i class="fa fa-envelope"></i> Email</label> <!-- label for Email-->
             <input type="email" id="email" name="email" placeholder="john@example.com" required>
-            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label> <!-- label for Address-->
             <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" required>
-            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <label for="city"><i class="fa fa-institution"></i> City</label> <!-- label for City-->
             <input type="text" id="city" name="city" placeholder="Dublin" required>
 		<!-- this is the row which asks the user to input their county, Zip code, Exp Year, CVV -->
-            <div class="row">
-              <div class="col-50">
-                <label for="state">County</label>
+            <div class="row"> <!-- Div class row container -->
+              <div class="col-50"> <!-- Div class col-50 container-->
+                <label for="state">County</label> <!-- label for County-->
                 <input type="text" id="state" name="state" placeholder="Galway" required>
               </div>
-              <div class="col-50">
-                <label for="zip">Zip</label>
-                <input type="text" id="zip" name="zip" placeholder="H54 F394" maxlength="8" required>
+              <div class="col-50"> <!-- Div class col-50 container-->
+                <label for="zip">Zip</label> <!-- label for Zip-->
+                <input type="text" id="zip" name="zip" placeholder="H54 F394" maxlength="8" required> <!-- maxlength means the maximum characters that can be entered-->
               </div>
             </div>
           </div>
-		<!-- this is the collum which asks the user to input the name on the card, the number, the month and year it expires, and the CVV -->
-          <div class="col-50">
+		<!-- this is the column which asks the user to input the name on the card, the number, the month and year it expires, and the CVV -->
+          <div class="col-50"> <!-- Div class col-50 container-->
             <h3>Payment</h3>
-            <img src="images/e.jpg" style="height: 104px;">
-            <label for="cname">Name on Card</label>
+            <img src="images/e.jpg" style="height: 104px;"> <!-- Image with css properties inline -->
+            <label for="cname">Name on Card</label> <!-- label for Name on Card-->
             <input type="text" id="cname" name="cardname" placeholder="John More Doe" required>
-            <label for="ccnum">Credit card number</label>
-            <input type="number" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" maxlength="16" pattern="[0-9\s]{13,19}" required>
-            <label for="expmonth">Exp Month</label>
+            <label for="ccnum">Credit card number</label> <!-- label for Credit card number-->
+            <input type="number" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" maxlength="16" pattern="[0-9\s]{13,19}" required> <!-- Pattern is meant to make it so only numericals can be typed but doesn't work -->
+            <label for="expmonth">Exp Month</label> <!-- label for Exp Month-->
             <input type="text" id="expmonth" name="expmonth" placeholder="September" required>
-            <div class="row">
+            <div class="row"> 
               <div class="col-50">
-                <label for="expyear">Exp Year</label>
+                <label for="expyear">Exp Year</label> <!-- label for Exp Year-->
                 <input type="tel" id="expyear" name="expyear" placeholder="2022" maxlength="4" required>
               </div>
               <div class="col-50">
-                <label for="cvv">CVV</label>
+                <label for="cvv">CVV</label>  <!-- label for CVV-->
                 <input type="tel" id="cvv" name="cvv" placeholder="352" maxlength="3" required>
               </div>
             </div>
           </div>
           
         </div>
-       <a href="Confirmation"><input type="submit" value="Pay" class="btn"> </a>
+       <a href="Confirmation"><input type="submit" value="Pay" class="btn"> </a> <!-- Submit button for form -->
       </form>
     </div>
   </div>
   
-  <div class="col-25">
-    <div class="container">
-      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i></span></h4>
+  <div class="col-25"> <!-- Discount code -->
+    <div class="container"><!-- Container class -->
+      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i></span></h4> <!-- styling using bootstrap and css -->
       <hr>
 	  <h3 id="totalPrice">Total : €0.00</h3>
-	  <input type="text" id="discountCode" placeholder="Discount Code">
-	  <button class="btn btn-primary" onclick="checkCoupon()">Apply Discount Code</button>
+	  <input type="text" id="discountCode" placeholder="Discount Code"> <!-- input for coupon code -->
+	  <button class="btn btn-primary" onclick="checkCoupon()">Apply Discount Code</button> <!-- Button for applying Coupon code -->
     </div>
   </div>
 </div>
@@ -144,48 +144,61 @@
 <!-- Start of Java Script section -->
 </body>
 	<script>
-		let totalValue = localStorage.getItem('totalValue');
-		let totalPriceDOM = document.getElementById("totalPrice");
+	//(C.McGr)
+		let totalValue = localStorage.getItem('totalValue'); //Get localstorage item and set it to variable totalValue 
+		let totalPriceDOM = document.getElementById("totalPrice"); //Get element ID totalPrice and set it to variable totalPriceDOM 
 		totalPriceDOM.innerHTML = "Total :  €" + totalValue;
 		
-		var couponCodes = ["gmit2020", "cian", "adrian", "jack"];
-		let isCouponApplied = 0;
-		sessionStorage.setItem('CouponApplied', 'yy');
-		function checkCoupon()
-	{
-		let couponInput = document.getElementById("discountCode").value;
-		let inputLowerCase = couponInput.toLowerCase();
-		let couponValue = sessionStorage.getItem('CouponApplied');
+		var couponCodes = ["gmit2020", "cian", "adrian", "jack"]; //Array of coupon codes
+		let isCouponApplied = 0; // Var isCouponApplied = 0
+		sessionStorage.setItem('CouponApplied', 'yy'); //Set sessionStorage 'CouponApplied' = 'yy'
 		
-		if (couponValue != 'xx')
+		var dates = new Date();//Sets dates to a new date object
+		let [date, month, year] = new Date().toLocaleDateString("en-IE").split("/"); //Sets variables date, month and year to current date in IE timezone
+		let expireDate = "31"; let expireMonth = "6"; let expireYear = "2021"; //Sets Expirey date of the coupon codes.
+		
+		function checkCoupon() //function checkCoupon
 		{
-		for(var i = 0; i < couponCodes.length; i++)
+		if (date <= expireDate && month <= expireMonth && year <= expireYear) //Logic used to determine if the coupon is expired
+		{
+		let couponInput = document.getElementById("discountCode").value; // var couponInput = ID discountCode's value
+		let inputLowerCase = couponInput.toLowerCase(); // sets couponInput to lowercase and stores it in inputLowerCase
+		let couponValue = sessionStorage.getItem('CouponApplied'); //couponValue equals to CouponApplied session storage
+		
+		if (couponValue != 'xx') //if sessionStorage couponValue doesn't equal 'xx'
+			{
+			for(var i = 0; i < couponCodes.length; i++) //For loop to increase i if its less than array length
 			{
 			
-				if (inputLowerCase == couponCodes[i])
+				if (inputLowerCase == couponCodes[i]) //If the input thats a lowercase now is equal to the coupon code then isCouponApplied is set to 1
 				{
 					isCouponApplied = 1;
 				}
 			}
-				if (isCouponApplied == 0)
+				if (isCouponApplied == 0) //If the input thats a lowercase now is not equal to the coupon code then isCouponApplied is set to 0
 				{
 					alert("Not a valid Coupon Code!");
 				}
-				
-				if (isCouponApplied == 1)
+					
+				if (isCouponApplied == 1) //If isCouponApplied is 1
 				{
-					alert("Coupon has been applied!");
-					totalValue = (totalValue*0.90);
-					totalPriceDOM.innerHTML = "Total After Discount :  €" + Math.round(totalValue* 100)/ 100;
-					sessionStorage.setItem('CouponApplied', 'xx');
+					alert("Coupon has been applied!"); //Alert
+					totalValue = (totalValue*0.90); //apply price
+					totalPriceDOM.innerHTML = "Total After Discount :  €" + Math.round(totalValue* 100)/ 100; //DOM the price into the webpage
+					sessionStorage.setItem('CouponApplied', 'xx'); //Set sessionStorage Item
 				}
-		}
+			}
 
-		if(couponValue == 'xx')
-		{
-			alert("Coupon already applied!")
+			if(couponValue == 'xx') //if sessionStorage couponValue does equal 'xx'
+			{
+				alert("Coupon already applied!"); //Alert
+			}
 		}
-	}
+		else
+			{
+				alert("Coupon Is Expired!"); //Alert
+			}
+		}
 	</script>
 	<!-- end of Java Script section -->
 </html>
