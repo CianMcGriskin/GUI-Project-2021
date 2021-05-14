@@ -10,39 +10,33 @@
 /* Styling for the drop down Browse button on the navigation bar */
 #buttonDropDownMenu
 {
-	padding-top: -;
-	padding-bottom: -;
-	padding-top: 5px;
-	padding-bottom: 5‒;
-	height: 40px;
-	padding-right: 8px;
-	padding-left: 8px;
-	margin-top: 0px;
-	padding-bottom: 5px;
-	margin-right: 8px;"
+	padding: 5px 8px; /* Sets padding top and bottom to 5px - left and right to 8px */
+	height: 40px; /* Sets height to 40px */
+	margin-top: 0px; /* Sets margin top to 0px */
+	margin-right: 8px; /* Sets margin right to 8px */
 }
 
-/* Styling for the Cart image on the navigation bar making it 40 pixels wide and creating a small space from the top */
+/* Styling for the Cart image on the navigation bar */
 #cart
 {
-	width: 40px;
-	padding-top: 10px;
+	width: 40px; /* Sets width to 40px */
+	padding-top: 10px; /* creates a small space of 10px from the top */
 }
 
-/* Styling for the logout button on the navigation bar which only appears once logged in*/
+/* Styling for the appendedButton ID */
 #appendedButton
 {
-	background-color: white;
-	border: none;
-	color: #ba2525;
-	padding: 2px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 19px;
-	margin: 4px 2px;
-	font: ariel;
-	margin-left: 12px;
+	background-color: white; /* Styling for the Cart image on the navigation bar making it 40 pixels wide and creating a small space from the top */
+	border: none; /* no border on the button */
+	color: #ba2525; /* sets text colour to #ba2525 */
+	padding: 2px; /* padding all around set to 2px */
+	text-align: center; /* alligns text to the center */
+	text-decoration: none; /* no text altercation */
+	display: inline-block; /* inline-block brought a new way to create side by side boxes that collapse and wrap properly depending on the available space */
+	font-size: 19px; /* sets text size to 19px */
+	margin: 4px 2px; /* sets margin top and bottom to 4px - left and right to 2px */
+	font: ariel; /* sets font to ariel */
+	margin-left: 12px; /* sets left margin to 12px */
 }
 
 /* Styling for the welcome message on the navigation bar which only appears once logged in*/
@@ -51,46 +45,44 @@
 	padding-top: 7px;
 }
 
-a:hover
-{
-	color: #ba2525;
-}
-
-/*Login page*/
+/*Login page ID Styling*/
 #loginPage
 {
-	text-align: center;
+	text-align: center; /* Alligns text to the center */
 }
 
+/* form type text styling */
 input[type="text"]::placeholder {  
-	text-align: center; 
-} 
-			
-input[type="password"]::placeholder {            
-	text-align: center; 
+	text-align: center; /* Alligns text to the center */
 } 
 
+/* form type password styling */	
+input[type="password"]::placeholder {            
+	text-align: center; /* Alligns text to the center */
+} 
+
+/* loginButton id styling */	
 #loginButton{
-    border: 0;
-    padding: 16px 24px;
-    background-color: #12b007;
-    color: #fff;
-    font-family: $font-bold;
-    font-size: 24px;
-    border-radius: 10px;
-	margin-bottom: 10px;
-  }
-  
+    border: 0; /* no border on the button */
+    padding: 16px 24px; /* padding top and bottom set to 16px - padding right and left set to 24px */
+    background-color: #12b007; /* Set background color to #12b007 */
+    color: #fff; /* Set text color to white */
+    font-size: 24px; /* Set text size to 24px */
+    border-radius: 10px; /* Set border radius to 10px - creating a rounded look */
+	margin-bottom: 10px; /* Set margin bottom to 10px */
+}
+
+/* forgetButton id styling */
  #ForgetButton{
-	border: 0;
-    padding: 8px 12px;
-    background-color: #ba2525;
-    color: #fff;
-    font-family: $font-bold;
-    font-size: 16px;
-    border-radius: 10px;
+	border: 0; /* no border on the button */
+    padding: 8px 12px; /* padding top and bottom set to 8px - padding right and left set to 12px */
+    background-color: #ba2525; /* Set background color to #ba2525 */
+    color: #fff; /* Set text color to white */
+    font-size: 16px; /* Set text size to 16px */
+    border-radius: 10px; /* Set border radius to 10px - creating a rounded look */
   }
   
+  /* strike id styling for discounted games */
   #strike{
-	  color: red;
+	  color: red; /* Set text color to red */
   }
