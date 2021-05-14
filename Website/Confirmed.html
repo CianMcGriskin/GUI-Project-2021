@@ -75,12 +75,20 @@
 <!-- End of Header Menu -->
 <br>
 	<h1><center>Thank you, your purchase has been made.</center></h1>
-	<h2><center>You will be redirected to the home page in 10 seconds...</center></h2>
+	<h2><center>You will be redirected to the home page in <div id="counter" style="display: inline;">10</div> seconds...</center></h2>
 	<script>
 	
-	setTimeout(function(){
-            window.location.href = 'Home.html';
-         }, 10000);
+	setInterval(function()
+	{
+		
+           var div = document.querySelector("#counter");
+           var count = div.textContent * 1 - 1;
+           div.textContent = count;
+           if (count <= 0) 
+		   {
+               window.location.replace("Home.html");
+           }
+	}, 1000);
 	</script>
 
 </body>
