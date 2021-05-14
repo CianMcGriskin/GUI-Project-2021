@@ -1,17 +1,20 @@
-
+//sets customer is the name for the element ID customers
 var customers = document.getElementById('customers');
-let totalValueOfEverything = 0;
-//Action games (C.McG.)
-//Item Name Variables
-var CSGO = localStorage.getItem("01Game");
-var GTA5 = localStorage.getItem("02Game");
-var RS6 = localStorage.getItem("03Game");
-var L4D = localStorage.getItem("04Game");
-var warframe = localStorage.getItem("05Game");
 
-//Price
+//Total value variable
+let totalValueOfEverything = 0;
+
+//Action games (C.McGr) (A.H.L)
+
+//Item Name Variables
+var CSGO = localStorage.getItem("01Game"); //Gets local storage value of item name and sets it to variable
+var GTA5 = localStorage.getItem("02Game"); //Gets local storage value of item name and sets it to variable
+var RS6 = localStorage.getItem("03Game"); //Gets local storage value of item name and sets it to variable
+var L4D = localStorage.getItem("04Game"); //Gets local storage value of item name and sets it to variable
+var warframe = localStorage.getItem("05Game"); //Gets local storage value of item name and sets it to variable
+
 //Item Price Variables
-var CSGOprice = localStorage.getItem("01Price");
+var CSGOprice = localStorage.getItem("01Price"); 
 var GTAprice = localStorage.getItem("02Price");
 var RS6price = localStorage.getItem("03Price");
 var L4Dprice = localStorage.getItem("04Price");
