@@ -1,61 +1,73 @@
-
+/* Checkout.css (C.McGr) */
+/* CSS Code taken from https://www.w3schools.com/howto/howto_css_checkout_form.asp*/
+/* Stylign for all elements */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Account for any border and padding in the values you specify for an element's width and height */
 }
 
+/* Class row styling */
 .row {
   display: -ms-flexbox; /* IE10 */
-  display: flex;
+  display: flex; /* Let all the flexible items be the same length, regardless of its content */
   -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  margin: 5 -16px;
+  flex-wrap: wrap; /* sets that items can wrap onto multiple lines. */
+  margin: 5 -16px; /* top and bottom margins are 5px right and left margins are -16px */
 }
 
+/* Class col-25 styling */
 .col-25 {
   -ms-flex: 25%; /* IE10 */
-  flex: 25%;
+  /* flex-basis sets initial main size of a flex item */
+  flex: 25%; /* sets the flex-basis property to 25% */
 }
 
+/* Class col-50 styling */
 .col-50 {
   -ms-flex: 50%; /* IE10 */
-  flex: 50%;
+  flex: 50%; /* sets the flex-basis property to 50% */
 }
 
+/* Class col-75 styling */
 .col-75 {
   -ms-flex: 75%; /* IE10 */
-  flex: 75%;
+  flex: 75%; /* sets the flex-basis property to 75% */
 }
 
+/* Class col-25, col-50, col-75 styling */
 .col-25,
 .col-50,
 .col-75 {
-  padding: 0 16px;
+  padding: 0 16px; /* sets padding top and bottom to 0x and left and right to 16px */
 }
 
+/* Class container styling */
 .container {
-  background-color: #f2f2f2;
-  padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
+  background-color: #f2f2f2; /* sets border color to #f2f2f2*/
+  padding: 5px 20px 15px 20px; /* sets padding  to 5px, right to 20px, bottom to 15x and left to 20px */ 
+  border: 1px solid lightgrey; /* sets border to 1px, creates a solid border and make a lightgrey color */
+  border-radius: 3px; /* sets border radius to 3px - making it slightly rounded */
 }
 
+/* tag input styling */
 input {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  width: 100%; /* makes the element as wide as the parent container */
+  margin-bottom: 20px; /* creates a margin at the bottom 20px */
+  padding: 12px; /* creates padding on all sides of 12px */
+  border: 1px solid #ccc; /* sets border to 1px, creates a solid border and make a #ccc color */
+  border-radius: 3px; /* sets border radius to 3px - making it slightly rounded */
 }
 
+/* tag label styling */
 label {
-  margin-bottom: 10px;
-  display: block;
+  margin-bottom: 10px; /* creates a margin at the bottom 10px */
+  display: block; /* Displays an element as a block element. It starts on a new line, and takes up the whole width */
 }
 
+/* class icon-container styling */
 .icon-container {
-  margin-bottom: 20px;
-  padding: 7px 0;
-  font-size: 24px;
+  margin-bottom: 20px; /* creates a margin at the bottom 20px */
+  padding: 7px 0; /* creates padding top and bottom is 7px and right and left are 0px */
+  font-size: 24px; /* makes font size 24px */
 }
 /* Style for Pay and Discount buttons */
 .btn {
