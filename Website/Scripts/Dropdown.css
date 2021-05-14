@@ -1,45 +1,35 @@
 /* DropDown menu styling (C.McGr)*/
-
-/*
-	styling for dropdown button
-*/
+/* styling for dropdown button */
 .dropbtn {
-  background-color: white;
-  margin-top: 3px;
-  color: black;
-  font-size: 20px;
-  border: none;
+  background-color: white; /* sets background color to white */
+  margin-top: 3px; /* sets top margin to 3px */
+  color: black; /* sets color to black */
+  font-size: 20px; /* sets font size to 20px */
+  border: none; /* sets no border on button */
 }
-/*
-	position means the element is positioned relative to its normal position
-*/
+
+/* styling for dropdown class */
 .dropdown {
-  position: relative;
-  display: inline-block;
+  position: relative; /* position means the element is positioned relative to its normal position */
+  display: inline-block; /* inline-block brought a new way to create side by side boxes that collapse and wrap properly depending on the available space */
 }
 
-/*
-	Styling for dropdown bar -
-	display is none which means it accepts no elements in between the text, position is absoloute
-	which means the element is positions absoloutly to its parent, minimum width of text allowed,
-	a box shadow for styling and z-index set to 1 means it will be displayed above everything else
-*/
+/* Styling class for dropdown-content */
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  display: none; /* display is none which means it accepts no elements in between the text */
+  position: absolute; /* position is absoloute which means the element is positions absoloutly to its parent */
+  background-color: #f1f1f1; /* sets background colour to #f1f1f1 */
+  min-width: 160px; /* minimum width of text allowed set to 160px */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* a box shadow for styling */
+  z-index: 1; /* z-index set to 1 means it will be displayed above everything else */
 }
 
-/*the dropdown links are black, have padding styling and have no text decoration and is displayed
-as block format - with whitesapec above and below it and no html element next to it*/
+/* dropdown-conent class stylig of the a tag */
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+  color: black; /* sets text color to black */
+  padding: 12px 16px; /* sets padding of top and left to 12px - left and right padding to 16px */
+  text-decoration: none; /* No text altercation on the link */
+  display: block; /* displayed as block format - with whitesapec above and below it and no html element next to it */
 }
 
 /*when you hover over one of the links within browse, the color changes to blue*/

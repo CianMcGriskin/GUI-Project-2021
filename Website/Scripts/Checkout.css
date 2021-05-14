@@ -69,34 +69,38 @@ label {
   padding: 7px 0; /* creates padding top and bottom is 7px and right and left are 0px */
   font-size: 24px; /* makes font size 24px */
 }
+
 /* Style for Pay and Discount buttons */
 .btn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  width: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 17px;
+  background-color: #04AA6D; /* sets background color to #04AA6D */
+  color: white; /* sets text color to white */
+  padding: 12px; /* sets padding on all sides to 12px */
+  margin: 10px 0; /* sets top and bottom margin to 10px - left and right margin 0px */
+  border: none; /* sets no border on the button */
+  width: 100%; /* makes the element as wide as the parent container */
+  border-radius: 3px; /* sets border radius to 3px - making it slightly rounded */
+  cursor: pointer; /* changes cursor to point icon */
+  font-size: 17px; /* makes font size 17px */
 }
 
 .btn:hover {
-  background-color: #45a049;
+  background-color: #45a049; /* changes background color when hovering over pay and discount buttons */
 }
 
+/* tag <a> styling*/
 a {
-  color: #2196F3;
+  color: #2196F3; /* Sets the color to #2196F3*/
 }
 
+/* tag hr styling */
 hr {
-  border: 1px solid lightgrey;
+  border: 1px solid lightgrey; /* creates a 1px solid border with colour lightgrey */
 }
-/* Style for Total Price */
+
+/* Style for specific tag class */
 span.price {
-  float: right;
-  color: grey;
+  float: right; /* positioning tool that pushs elements right. */
+  color: grey; /* sets color to grey */
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */

@@ -1,10 +1,10 @@
 /* Header.css (C.McGr)*/
-/*Creates a bottom red line underneth the navigation bar*/
+/* Header ID styling */
 #Header
 {
-	border-bottom: 7px solid #ba2525;
-	height: 81px;
-	margin-top: 5px;
+	border-bottom: 7px solid #ba2525; /*Creates a bottom red line underneth the navigation bar of 7px*/
+	height: 81px; /* Sets height to 81px */
+	margin-top: 5px; /* Sets margin top to 5px */
 }
 
 /* Styling for the drop down Browse button on the navigation bar */
