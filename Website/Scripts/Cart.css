@@ -27,8 +27,6 @@
 #customers th {
   padding-top: 12px; /* Creates a padding of 12px at the top */
   padding-bottom: 12px; /* Creates a padding of 12px at the bottom */
-  background-color: #000000; /* Sets background color of th to black */
-  color: white; /* Sets color to white */
   text-align: center; /* Alligns text to the center */
 }
 

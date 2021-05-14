@@ -80,12 +80,12 @@
 <br>
 <table id="customers">
   <tr>
-    <th style="width: 91px;">Image</th>
-    <th style="width: 398px;">Product Name</th>
-	<th style="width: 176px;">Unit Price (&euro;)</th>
-    <th style="width: 356px;">Quantity</th>
-	<th style="width: 114px;">Remove</th>
-	<th style="width: 114px;">Total (&euro;) </th>
+    <th id="header1" style="width: 91px;">Image</th>
+    <th id="header2" style="width: 398px;">Product Name</th>
+	<th id="header3" style="width: 176px;">Unit Price (&euro;)</th>
+    <th id="header4" style="width: 356px;">Quantity</th>
+	<th id="header5" style="width: 114px;">Remove</th>
+	<th id="header6" style="width: 114px;">Total (&euro;) </th>
   </tr>
   </table>
   <table id="customers" > 
@@ -109,5 +109,19 @@
 		<script type="text/javascript" src="Scripts/JavaScript/cartDOM.js"></script>
 		
   <button id="Checkout" onclick="Checkout()">Checkout</button>
-
+		<script>
+		//Changing the style of the header through the DOM
+			document.getElementById("header1").style.color = 'white';
+			document.getElementById("header1").style.backgroundColor = 'black';
+			document.getElementById("header2").style.color = 'white';
+			document.getElementById("header2").style.backgroundColor = 'black';
+			document.getElementById("header3").style.color = 'white';
+			document.getElementById("header3").style.backgroundColor = 'black';
+			document.getElementById("header4").style.color = 'white';
+			document.getElementById("header4").style.backgroundColor = 'black';
+			document.getElementById("header5").style.color = 'white';
+			document.getElementById("header5").style.backgroundColor = 'black';
+			document.getElementById("header6").style.color = 'white';
+			document.getElementById("header6").style.backgroundColor = 'black';
+		</script
 </html>
