@@ -74,21 +74,23 @@
 </div>
 <!-- End of Header Menu -->
 <br>
+	<!-- This page shows up when your purchase is confirmed -->
 	<h1><center>Thank you, your purchase has been made.</center></h1>
 	<h2><center>You will be redirected to the home page in <div id="counter" style="display: inline;">10</div> seconds...</center></h2>
+	<!-- the div above is used to change the seconds counter for when the page will redirect to the home page-->
 	<script>
 	
-	setInterval(function()
+	setInterval(function()//This runs the code inside the {} tags once every 1 seconds
 	{
 		
-           var div = document.querySelector("#counter");
-           var count = div.textContent * 1 - 1;
+           var div = document.querySelector("#counter"); //gets the id counter from the div on line 79
+           var count = div.textContent * 1 - 1; //takes away 1 from the counter
            div.textContent = count;
-           if (count <= 0) 
+           if (count <= 0) //once the count reaches zero it does the following...
 		   {
-               window.location.replace("Home.html");
+               window.location.replace("Home.html"); //redirects to the home.html page
            }
-	}, 1000);
+	}, 1000);//This specifies how many seconds before this code runs again (1000 is 1 second)
 	</script>
 
 </body>
