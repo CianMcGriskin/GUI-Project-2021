@@ -1,6 +1,7 @@
 //Getting all the id tags for each "Add to cart" button (A.H-L)
-if(document.getElementById("01") != null){ //This makes it so this code only works on the page this code is made for
-document.getElementById("01").addEventListener("click", game01);}
+if(document.getElementById("01") != null){ //The if statements make sure that the website only tries grabbing id tags if they exist (prevents errors)
+document.getElementById("01").addEventListener("click", game01);} //This event listener triggers the function for each id tag which can add or remove games from local storage
+//These comments apply to the following too:
 if(document.getElementById("02") != null){ 
 document.getElementById("02").addEventListener("click", game02);}
 if(document.getElementById("03") != null){ 
@@ -50,26 +51,25 @@ document.getElementById("24").addEventListener("click", game24);}
 if(document.getElementById("25") != null){
 document.getElementById("25").addEventListener("click", game25);}
 
-function game01(){
-	if(document.getElementById("01").textContent == "Remove from Cart")
+function game01(){ //This is the function that is called above ^
+	if(document.getElementById("01").textContent == "Remove from Cart") //If the button on the website says "Remove from Cart" when it is clicked then it will remove the game item and price from local storage
 	{
-		localStorage.removeItem("01Game");
-		localStorage.removeItem("01Price");
+		localStorage.removeItem("01Game"); //removes "01Game" from Local Storage
+		localStorage.removeItem("01Price");//removes "01Price" from Local Storage
 		
-		document.getElementById("01").textContent = "Add to Cart";
-	}else 
+		document.getElementById("01").textContent = "Add to Cart";//Changes the button under the game from "Remove from Cart" to "Add to Cart"
+	}else //If the button under the game says "Add to Cart" it will do the following...
 	{
-	document.getElementById("01").textContent = "Remove from Cart";
-	localStorage.setItem("01Game", "Counter-Strike Global Offensive");
-	localStorage.setItem("01Price", "12.99");
-	document.getElementById("01").textContent = "Remove from Cart";
+	document.getElementById("01").textContent = "Remove from Cart"; //changes the button text to "Remove from Cart"
+	localStorage.setItem("01Game", "Counter-Strike Global Offensive"); //Adds the game name into the local storage 
+	localStorage.setItem("01Price", "12.99"); //Adds the price of the game into local storage
 	}
-}   //This function makes it so you can add the item to cart and when it exists in the cart you cna remove it
+}   
 
-if(localStorage.getItem("01Game") != null && document.getElementById("01") != null){
-	document.getElementById("01").textContent = "Remove from Cart";
-} //If the item is in the cart the page loads with the text "Remove from Cart" on it instead of "Add to Cart"
-
+if(localStorage.getItem("01Game") != null && document.getElementById("01") != null){ //while the item 01Game exists and while the id tag "01" exists on the page, do the following...
+	document.getElementById("01").textContent = "Remove from Cart"; //The page usually loads with the button saying "Add to Cart" so now if the item is in the cart, it loads saying "Remove from Cart"
+} 
+//The comments above apply to everything below:
 function game02(){
 	if(document.getElementById("02").textContent == "Remove from Cart")
 	{
@@ -82,7 +82,6 @@ function game02(){
 	document.getElementById("02").textContent = "Remove from Cart";
 	localStorage.setItem("02Game", "Grand Theft Auto V");
 	localStorage.setItem("02Price", "22.49");
-	document.getElementById("02").textContent = "Remove from Cart";
 	}
 }
 
@@ -102,7 +101,6 @@ function game03(){
 	document.getElementById("03").textContent = "Remove from Cart";
 	localStorage.setItem("03Game", "Rainbow Six Siege");
 	localStorage.setItem("03Price", "19.99");
-	document.getElementById("03").textContent = "Remove from Cart";
 	}
 }
 
@@ -122,7 +120,6 @@ function game04(){
 	document.getElementById("04").textContent = "Remove from Cart";
 	localStorage.setItem("04Game", "Left For Dead Two");
 	localStorage.setItem("04Price", "8.19");
-	document.getElementById("04").textContent = "Remove from Cart";
 	}
 }
 
@@ -142,7 +139,6 @@ function game05(){
 	document.getElementById("05").textContent = "Remove from Cart";
 	localStorage.setItem("05Game", "Warframe");
 	localStorage.setItem("05Price", "14.99");
-	document.getElementById("05").textContent = "Remove from Cart";
 	}
 }
 
@@ -162,7 +158,6 @@ function game06(){
 	document.getElementById("06").textContent = "Remove from Cart";
 	localStorage.setItem("06Game", "Terraria");
 	localStorage.setItem("06Price", "9.99");
-	document.getElementById("06").textContent = "Remove from Cart";
 	}
 }
 
@@ -182,7 +177,6 @@ function game07(){
 	document.getElementById("07").textContent = "Remove from Cart";
 	localStorage.setItem("07Game", "The Witcher 3: Wild Hunt");
 	localStorage.setItem("07Price", "29.99");
-	document.getElementById("07").textContent = "Remove from Cart";
 	}
 }
 
@@ -202,7 +196,6 @@ function game08(){
 	document.getElementById("08").textContent = "Remove from Cart";
 	localStorage.setItem("08Game", "Tomb Raider");
 	localStorage.setItem("08Price", "1.59");
-	document.getElementById("08").textContent = "Remove from Cart";
 	}
 }
 
@@ -222,7 +215,6 @@ function game09(){
 	document.getElementById("09").textContent = "Remove from Cart";
 	localStorage.setItem("09Game", "The Forest");
 	localStorage.setItem("09Price", "16.79");
-	document.getElementById("09").textContent = "Remove from Cart";
 	}
 }
 
@@ -242,7 +234,6 @@ function game10(){
 	document.getElementById("10").textContent = "Remove from Cart";
 	localStorage.setItem("10Game", "ARK: Survival Evolved");
 	localStorage.setItem("10Price", "46.79");
-	document.getElementById("10").textContent = "Remove from Cart";
 	}
 }
 
@@ -262,7 +253,6 @@ function game11(){
 	document.getElementById("11").textContent = "Remove from Cart";
 	localStorage.setItem("11Game", "The Elder Scrolls Online");
 	localStorage.setItem("11Price", "7.99");
-	document.getElementById("11").textContent = "Remove from Cart";
 	}
 }
 
@@ -282,7 +272,6 @@ function game12(){
 	document.getElementById("12").textContent = "Remove from Cart";
 	localStorage.setItem("12Game", "VRChat");
 	localStorage.setItem("12Price", "4.99");
-	document.getElementById("12").textContent = "Remove from Cart";
 	}
 }
 
@@ -302,7 +291,6 @@ function game13(){
 	document.getElementById("13").textContent = "Remove from Cart";
 	localStorage.setItem("13Game", "Planetside 2");
 	localStorage.setItem("13Price", "10.80");
-	document.getElementById("13").textContent = "Remove from Cart";
 	}
 }
 
@@ -322,7 +310,6 @@ function game14(){
 	document.getElementById("14").textContent = "Remove from Cart";
 	localStorage.setItem("14Game", "Final Fantasy XIV");
 	localStorage.setItem("14Price", "9.99");
-	document.getElementById("14").textContent = "Remove from Cart";
 	}
 }
 
@@ -342,7 +329,6 @@ function game15(){
 	document.getElementById("15").textContent = "Remove from Cart";
 	localStorage.setItem("15Game", "Runescape");
 	localStorage.setItem("15Price", "18.99");
-	document.getElementById("15").textContent = "Remove from Cart";
 	}
 }
 
@@ -362,7 +348,6 @@ function game16(){
 	document.getElementById("16").textContent = "Remove from Cart";
 	localStorage.setItem("16Game", "Assetto Corsa");
 	localStorage.setItem("16Price", "19.99");
-	document.getElementById("16").textContent = "Remove from Cart";
 	}
 }
 
@@ -382,7 +367,6 @@ function game17(){
 	document.getElementById("17").textContent = "Remove from Cart";
 	localStorage.setItem("17Game", "BeamNG.drive");
 	localStorage.setItem("17Price", "20.99");
-	document.getElementById("17").textContent = "Remove from Cart";
 	}
 }
 
@@ -402,7 +386,6 @@ function game18(){
 	document.getElementById("18").textContent = "Remove from Cart";
 	localStorage.setItem("18Game", "F1 2020");
 	localStorage.setItem("18Price", "43.99");
-	document.getElementById("18").textContent = "Remove from Cart";
 	}
 }
 
@@ -422,7 +405,6 @@ function game19(){
 	document.getElementById("19").textContent = "Remove from Cart";
 	localStorage.setItem("19Game", "CarX Drift Racing Online");
 	localStorage.setItem("19Price", "12.49");
-	document.getElementById("19").textContent = "Remove from Cart";
 	}
 }
 
@@ -442,7 +424,6 @@ function game20(){
 	document.getElementById("20").textContent = "Remove from Cart";
 	localStorage.setItem("20Game", "The Crew 2");
 	localStorage.setItem("20Price", "49.99");
-	document.getElementById("20").textContent = "Remove from Cart";
 	}
 }
 
@@ -462,7 +443,6 @@ function game21(){
 	document.getElementById("21").textContent = "Remove from Cart";
 	localStorage.setItem("21Game", "Dota 2");
 	localStorage.setItem("21Price", "12.92");
-	document.getElementById("21").textContent = "Remove from Cart";
 	}
 }
 
@@ -482,7 +462,6 @@ function game22(){
 	document.getElementById("22").textContent = "Remove from Cart";
 	localStorage.setItem("22Game", "Civilization V");
 	localStorage.setItem("22Price", "23.98");
-	document.getElementById("22").textContent = "Remove from Cart";
 	}
 }
 
@@ -502,7 +481,6 @@ function game23(){
 	document.getElementById("23").textContent = "Remove from Cart";
 	localStorage.setItem("23Game", "Age of Empires II");
 	localStorage.setItem("23Price", "18.99");
-	document.getElementById("23").textContent = "Remove from Cart";
 	}
 }
 
@@ -522,7 +500,6 @@ function game24(){
 	document.getElementById("24").textContent = "Remove from Cart";
 	localStorage.setItem("24Game", "Bloons TD6");
 	localStorage.setItem("24Price", "8.19");
-	document.getElementById("24").textContent = "Remove from Cart";
 	}
 }
 
@@ -542,121 +519,9 @@ function game25(){
 	document.getElementById("25").textContent = "Remove from Cart";
 	localStorage.setItem("25Game", "RimWorld");
 	localStorage.setItem("25Price", "29.99");
-	document.getElementById("25").textContent = "Remove from Cart";
 	}
 }
 
 if(localStorage.getItem("25Game") != null && document.getElementById("25")){
 	document.getElementById("25").textContent = "Remove from Cart";
-}
-
-//This is the system for clearing every item from the cart (A.H-L)
-if(document.getElementById("clearCart") != null)
-{
-	document.getElementById("clearCart").addEventListener("click", clearCart);	
-}
-	function clearCart() 
-	{
-		
-		if(localStorage.getItem("01Game") != null){
-			localStorage.removeItem("01Game");
-			localStorage.removeItem("01Price");
-		}
-		if(localStorage.getItem("02Game") != null){
-			localStorage.removeItem("02Game");
-			localStorage.removeItem("02Price");
-		}
-		if(localStorage.getItem("03Game") != null){
-			localStorage.removeItem("03Game");
-			localStorage.removeItem("03Price");
-		}
-		if(localStorage.getItem("04Game") != null){
-			localStorage.removeItem("04Game");
-			localStorage.removeItem("04Price");
-		}
-		if(localStorage.getItem("05Game") != null){
-			localStorage.removeItem("05Game");
-			localStorage.removeItem("05Price");
-		}
-		if(localStorage.getItem("06Game") != null){
-			localStorage.removeItem("06Game");
-			localStorage.removeItem("06Price");
-		}
-		if(localStorage.getItem("07Game") != null){
-			localStorage.removeItem("07Game");
-			localStorage.removeItem("07Price");
-		}
-		if(localStorage.getItem("08Game") != null){
-			localStorage.removeItem("08Game");
-			localStorage.removeItem("08Price");
-		}
-		if(localStorage.getItem("09Game") != null){
-			localStorage.removeItem("09Game");
-			localStorage.removeItem("09Price");
-		}
-		if(localStorage.getItem("10Game") != null){
-			localStorage.removeItem("10Game");
-			localStorage.removeItem("10Price");
-		}
-		if(localStorage.getItem("11Game") != null){
-			localStorage.removeItem("11Game");
-			localStorage.removeItem("11Price");
-		}
-		if(localStorage.getItem("12Game") != null){
-			localStorage.removeItem("12Game");
-			localStorage.removeItem("12Price");
-		}
-		if(localStorage.getItem("13Game") != null){
-			localStorage.removeItem("13Game");
-			localStorage.removeItem("13Price");
-		}
-		if(localStorage.getItem("14Game") != null){
-			localStorage.removeItem("14Game");
-			localStorage.removeItem("14Price");
-		}
-		if(localStorage.getItem("15Game") != null){
-			localStorage.removeItem("15Game");
-			localStorage.removeItem("15Price");
-		}
-		if(localStorage.getItem("16Game") != null){
-			localStorage.removeItem("16Game");
-			localStorage.removeItem("16Price");
-		}
-		if(localStorage.getItem("17Game") != null){
-			localStorage.removeItem("17Game");
-			localStorage.removeItem("17Price");
-		}
-		if(localStorage.getItem("18Game") != null){
-			localStorage.removeItem("18Game");
-			localStorage.removeItem("18Price");
-		}
-		if(localStorage.getItem("19Game") != null){
-			localStorage.removeItem("19Game");
-			localStorage.removeItem("19Price");
-		}
-		if(localStorage.getItem("20Game") != null){
-			localStorage.removeItem("20Game");
-			localStorage.removeItem("20Price");
-		}
-		if(localStorage.getItem("21Game") != null){
-			localStorage.removeItem("21Game");
-			localStorage.removeItem("21Price");
-		}
-		if(localStorage.getItem("22Game") != null){
-			localStorage.removeItem("22Game");
-			localStorage.removeItem("22Price");
-		}
-		if(localStorage.getItem("23Game") != null){
-			localStorage.removeItem("23Game");
-			localStorage.removeItem("23Price");
-		}
-		if(localStorage.getItem("24Game") != null){
-			localStorage.removeItem("24Game");
-			localStorage.removeItem("24Price");
-		}
-		if(localStorage.getItem("25Game") != null){
-			localStorage.removeItem("25Game");
-			localStorage.removeItem("25Price");
-		}
-	location.reload();
 }
