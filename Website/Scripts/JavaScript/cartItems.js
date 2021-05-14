@@ -1,4 +1,5 @@
-//Getting all the id tags for each "Add to cart" button (A.H-L)
+//Javascript by (A.H-L)
+//Getting all the id tags for each "Add to cart" button 
 if(document.getElementById("01") != null){ //The if statements make sure that the website only tries grabbing id tags if they exist (prevents errors)
 document.getElementById("01").addEventListener("click", game01);} //This event listener triggers the function for each id tag which can add or remove games from local storage
 //These comments apply to the following too:
