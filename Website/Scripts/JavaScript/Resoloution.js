@@ -35,7 +35,7 @@ if(window.outerWidth < 1920 && window.outerWidth > 1680)
 	document.body.style.zoom = 0.91;
 }
 
-if(window.outerWidth < 1440 && window.outerWidth > 900)
+if(window.outerWidth < 1440 && window.outerHeight > 900)
 {
 	document.body.style.zoom = 0.75;
 }
