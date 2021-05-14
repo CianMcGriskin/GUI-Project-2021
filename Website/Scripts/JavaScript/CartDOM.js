@@ -27,7 +27,7 @@ var warframeprice = localStorage.getItem("05Price"); //Gets local storage value 
 		let name = CSGO; // Name = name of product
 		// DOM of customers ID
 		customers.innerHTML+= '<tr>' + '<td><img id="thumbImages" src="GenreGames/Action/GameImages/CSGO.webp"></td>' + '<td>' + name +'</td>' + '<td>' + CSGOprice + '</td>' + '<td><div id="product-quantity"><input type="number" id="quantityValueCSGO" onkeyup="saveButtonCSGO()" onclick="saveButtonCSGO()" value="1" min="1"></div> </td>' + '<td><button class="remove-product" onclick="removeCSGO()">Remove</button></td>' + '<td id="totalPriceCSGO">' + CSGOprice + '</td></tr>';
-		// calles function updateTotalValue()
+		// calls function updateTotalValue()
 		updateTotalValue();
 	}
 	
@@ -37,22 +37,23 @@ var warframeprice = localStorage.getItem("05Price"); //Gets local storage value 
 		//Remove CSGO from localStorage
 		localStorage.removeItem("01Game");
 		localStorage.removeItem("01Price");
-		document.getElementById("totalPriceCSGO").textContent = 0;
-		updateTotalValue();
+		document.getElementById("totalPriceCSGO").textContent = 0; //Changes the content of totalPriceCSGO before removing it from the site to update the total value
+		updateTotalValue();//calls the function to update total value
 		location.reload();
 	}
 	
 	//Still need to work on changing quantity to H2 and changing the quantity so it stays permanently with localStorage
 	function saveButtonCSGO()
 	{
-		let totalPriceContentCSGO = document.getElementById("totalPriceCSGO");
-		let x = document.getElementById("quantityValueCSGO").value;
-		let totalPriceCSGO = CSGOprice * x;
-		totalPriceCSGO = Math.round(totalPriceCSGO * 100) / 100;
-		totalPriceContentCSGO.textContent = totalPriceCSGO;
-		updateTotalValue();
+		let totalPriceContentCSGO = document.getElementById("totalPriceCSGO"); //calls the total price variable
+		let x = document.getElementById("quantityValueCSGO").value; //lets the temporary variable called x = the quantity of the item
+		let totalPriceCSGO = CSGOprice * x; //multiplies the game value by the quantity
+		totalPriceCSGO = Math.round(totalPriceCSGO * 100) / 100; //rounds to two decmial places
+		totalPriceContentCSGO.textContent = totalPriceCSGO; //updates HTML to show the price correctly
+		updateTotalValue(); //calls the function to update total value
 	}
 //End of CSGO
+//THE COMMENTS ABOVE APPLY TO EVERYTHING BELOW UNTIL LINE 742
 
 //GTA5
 if(GTA5 == "Grand Theft Auto V")
@@ -746,10 +747,10 @@ function updateTotalValue() //(A.H-L)
 {
 	totalValueOfEverything = 0;
 	//ACTION GAMES
-	if(typeof totalPriceCSGO != "undefined"){
-	let tempValue = document.getElementById("totalPriceCSGO").textContent;
-	totalValueOfEverything += parseFloat(tempValue);}
-	
+	if(typeof totalPriceCSGO != "undefined"){ //if totalPriceCSGO exists, do the follwing...
+	let tempValue = document.getElementById("totalPriceCSGO").textContent; //make the total price a temp variable
+	totalValueOfEverything += parseFloat(tempValue);} //add the temp to the totalValueOfEverything
+	//THE COMMENTS ABOVE APPLY TO THE CODE BELOW:
 	if(typeof totalPriceGTA != "undefined"){
 	let tempValue = document.getElementById("totalPriceGTA").textContent;
 	totalValueOfEverything += parseFloat(tempValue);}
@@ -860,13 +861,13 @@ function updateTotalValue() //(A.H-L)
 	document.getElementById("TotalPrice").textContent = "Total: €" + totalValueOfEverything;
 	localStorage.setItem('totalValue', totalValueOfEverything);
 }
-function Checkout()
+function Checkout() //(A.H-L)
 {
-	if(totalValueOfEverything == 0)
+	if(totalValueOfEverything == 0)//if the total value = 0
 	{
-		alert("The cart is empty!!!");
+		alert("The cart is empty!!!");//
 	}
-	else{
+	else{ //if theres anything in the cart...
 		window.location.href = "Checkout.html";
 	}
 }
