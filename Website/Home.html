@@ -175,7 +175,7 @@
 			</div>
 		</div>
 	</div>
-	<!--Slide One - Adventure Games-->
+	<!--Slide three - Adventure Games-->
 	<div class="carousel-item" id="RandomLoad3">
 		<div class="grid">
 			<div class="column"><img src="GenreGames/Adventure/GameImages/Terraria.webp" class="image" id="Terraria" alt="Terraria">
@@ -214,7 +214,7 @@
 			</div>
 		</div>
 	</div>
-	<!--Slide One - Strategy Games-->
+	<!--Slide four - Strategy Games-->
 	<div class="carousel-item" id="RandomLoad4">
 		<div class="grid">
 			<div class="column"><img src="GenreGames/Strategy/GameImages/Dota2.jpg" class="image" alt="Dota 2">
@@ -254,7 +254,7 @@
 		</div>
 	</div>
 	
-	<!--Slide One - Action Games-->
+	<!--Slide five - Action Games-->
 	<div class="carousel-item" id="RandomLoad5">
 		<div class="grid">
 			<div class="column"><img src="GenreGames/Action/GameImages/CSGO.webp" class="image" id="CSGO" alt="Counter-Strike: Global Offensive">
@@ -308,30 +308,30 @@
 
 </body>
 		<script>
-		let randomNumber = Math.floor(Math.random() * 5);
-		if(randomNumber == 0)
+		let randomNumber = Math.floor(Math.random() * 5); //picks random number between 0 and 4 and assigns it to randomNumber
+		if(randomNumber == 0)// if the random number picked is 0, do  the following...
 		{
-			document.getElementById("RandomLoad1").classList.add('active');
+			document.getElementById("RandomLoad1").classList.add('active'); //loads first slide once page loads
 		}
 		
-		if(randomNumber == 1)
+		if(randomNumber == 1)// if the random number picked is 1, do  the following...
 		{
-			document.getElementById("RandomLoad2").classList.add('active');
+			document.getElementById("RandomLoad2").classList.add('active'); //loads second slide once page loads
 		}
 		
-		if(randomNumber == 2)
+		if(randomNumber == 2)// if the random number picked is 2, do  the following...
 		{
-			document.getElementById("RandomLoad3").classList.add('active');
+			document.getElementById("RandomLoad3").classList.add('active'); //loads third slide once page loads
 		}
 		
-		if(randomNumber == 3)
+		if(randomNumber == 3)// if the random number picked is 3, do  the following...
 		{
-			document.getElementById("RandomLoad4").classList.add('active');
+			document.getElementById("RandomLoad4").classList.add('active'); //loads fourth slide once page loads
 		}
 		
-		if(randomNumber == 4)
+		if(randomNumber == 4)// if the random number picked is 4, do  the following...
 		{
-			document.getElementById("RandomLoad5").classList.add('active');
+			document.getElementById("RandomLoad5").classList.add('active'); //loads fifth slide once page loads
 		}
 		
 		</script>
