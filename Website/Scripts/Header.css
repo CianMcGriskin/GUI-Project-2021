@@ -86,3 +86,8 @@ input[type="password"]::placeholder {
   #strike{
 	  color: red; /* Set text color to red */
   }
+  /* responsive class will have a max width it can go to and it cant get bigger (used in images)*/
+	.responsive {
+  max-width: 100%;
+  height: auto;
+}
