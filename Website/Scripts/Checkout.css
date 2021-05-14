@@ -57,7 +57,7 @@ label {
   padding: 7px 0;
   font-size: 24px;
 }
-
+/* Style for Pay and Discount buttons */
 .btn {
   background-color: #04AA6D;
   color: white;
@@ -81,7 +81,7 @@ a {
 hr {
   border: 1px solid lightgrey;
 }
-
+/* Style for Total Price */
 span.price {
   float: right;
   color: grey;
